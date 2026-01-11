@@ -587,7 +587,7 @@ function TestDriveSection() {
       <div className="container mx-auto max-w-6xl">
         <div className="text-left sm:text-center mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 leading-tight">
-            Посмотрите на своего <span className="gradient-text">«Цифрового двойника»</span> <br className="hidden sm:block" />в деле до основной оплаты
+            Создадим тестовую версию вашего бота - <span className="gradient-text">испытайте его в действии</span>
           </h2>
         </div>
         
