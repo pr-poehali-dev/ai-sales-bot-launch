@@ -20,7 +20,6 @@ export default function Index() {
       <HybridSection />
       <ExpertiseSection />
       <TestDriveSection />
-      <InvestmentSection />
       <TestimonialsSection />
       <FAQSection />
       <FinalCTASection />
@@ -63,13 +62,15 @@ function HeroSection() {
           </p>
           
           <div className="pt-8">
-            <Button 
-              size="lg" 
-              className="text-sm sm:text-base md:text-lg lg:text-xl px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-5 md:py-6 lg:py-8 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-bold w-full sm:w-auto"
-            >
-              <Icon name="Sparkles" className="mr-2 sm:mr-3" size={20} />
-              <span className="leading-tight">Узнать подробнее</span>
-            </Button>
+            <a href="#problem">
+              <Button 
+                size="lg" 
+                className="text-sm sm:text-base md:text-lg lg:text-xl px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-5 md:py-6 lg:py-8 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-bold w-full sm:w-auto"
+              >
+                <Icon name="Sparkles" className="mr-2 sm:mr-3" size={20} />
+                <span className="leading-tight">Узнать подробнее</span>
+              </Button>
+            </a>
           </div>
         </div>
       </div>
@@ -83,7 +84,7 @@ function HeroSection() {
 
 function ProblemSection() {
   return (
-    <section className="py-32 px-4 sm:px-6 relative">
+    <section id="problem" className="py-32 px-4 sm:px-6 relative">
       <div className="container mx-auto max-w-6xl">
         <div className="text-left sm:text-center mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 gradient-text leading-tight">
@@ -236,13 +237,15 @@ function NichesSection() {
             </p>
           </Card>
           <div>
-            <Button 
-              size="lg" 
-              className="text-sm sm:text-base md:text-lg lg:text-xl px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-bold w-full sm:w-auto"
-            >
-              <Icon name="Zap" className="mr-2 sm:mr-3" size={20} />
-              Хочу протестировать
-            </Button>
+            <a href="#test-drive">
+              <Button 
+                size="lg" 
+                className="text-sm sm:text-base md:text-lg lg:text-xl px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-bold w-full sm:w-auto"
+              >
+                <Icon name="Zap" className="mr-2 sm:mr-3" size={20} />
+                Хочу протестировать
+              </Button>
+            </a>
           </div>
         </div>
       </div>
@@ -632,35 +635,6 @@ function TestDriveSection() {
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
             Если результат не устроит — мы не продолжаем
           </p>
-        </Card>
-      </div>
-    </section>
-  );
-}
-
-function InvestmentSection() {
-  return (
-    <section className="py-32 px-4 sm:px-6">
-      <div className="container mx-auto max-w-4xl text-center">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-8 md:mb-12 px-4 leading-tight">
-          Инвестиция в <span className="gradient-text">актив</span>
-        </h2>
-        
-        <Card className="p-6 sm:p-8 md:p-10 lg:p-12 bg-card/50 border-2 border-secondary/50">
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-secondary">Окупаемость за 3 месяца</h3>
-          
-          <div className="space-y-4 sm:space-y-6 text-base sm:text-lg md:text-xl leading-relaxed">
-            <p>
-              Вы платите <span className="text-primary font-bold text-xl sm:text-2xl md:text-3xl">85 000 сом</span> один раз 
-              за бессмертного сотрудника.
-            </p>
-            
-            <div className="h-px bg-gradient-to-r from-transparent via-secondary to-transparent" />
-            
-            <p className="text-lg sm:text-xl md:text-2xl font-semibold">
-              Он не унесет базу, не попросит отпуск и будет приносить деньги <span className="text-secondary">годами</span>.
-            </p>
-          </div>
         </Card>
       </div>
     </section>
