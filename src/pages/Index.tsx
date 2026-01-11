@@ -41,31 +41,31 @@ function HeroSection() {
       
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center space-y-8 animate-fade-in">
-          <Badge variant="outline" className="neon-border px-6 py-2 text-lg">
+          <Badge variant="outline" className="neon-border px-3 py-1.5 text-xs sm:text-sm md:text-base lg:text-lg">
             Для владельцев бизнеса в Бишкеке (трафик от 50 заявок/день)
           </Badge>
           
-          <h1 className="text-5xl md:text-7xl font-black leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight px-4">
             Перестаньте платить менеджерам за{" "}
             <span className="gradient-text">«работу автоответчиком»</span>
           </h1>
           
-          <p className="text-2xl md:text-3xl text-muted-foreground max-w-4xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto px-4">
             Платите за <span className="text-primary font-bold">ПРОДАЖИ</span>
           </p>
           
-          <p className="text-xl md:text-2xl text-foreground/80 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/80 max-w-3xl mx-auto px-4">
             Внедрите ИИ-ассистента для первичной обработки 100% обращений. 
             Ваша команда работает только с «горячими» клиентами.
           </p>
           
-          <div className="pt-8">
+          <div className="pt-8 px-4">
             <Button 
               size="lg" 
-              className="text-xl px-12 py-8 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-bold"
+              className="text-sm sm:text-base md:text-lg lg:text-xl px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-5 md:py-6 lg:py-8 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-bold w-full sm:w-auto"
             >
-              <Icon name="Sparkles" className="mr-3" size={28} />
-              Получить тестовую версию за 5 000 сом
+              <Icon name="Sparkles" className="mr-2 sm:mr-3" size={20} />
+              <span className="leading-tight">Получить тестовую версию<br className="sm:hidden" /> за 5 000 сом</span>
             </Button>
           </div>
         </div>
@@ -82,21 +82,21 @@ function ProblemSection() {
   return (
     <section className="py-32 px-6 relative">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-black mb-6 gradient-text">
+        <div className="text-center mb-16 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 gradient-text leading-tight">
             Почему 50 заявок в день — это ловушка, съедающая прибыль?
           </h2>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card className="p-8 bg-card/50 backdrop-blur border-2 border-destructive/50 hover:border-destructive transition-all">
-            <div className="flex items-start gap-4">
-              <div className="p-3 bg-destructive/20 rounded-lg">
-                <Icon name="AlertTriangle" size={32} className="text-destructive" />
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+          <Card className="p-4 sm:p-6 md:p-8 bg-card/50 backdrop-blur border-2 border-destructive/50 hover:border-destructive transition-all">
+            <div className="flex items-start gap-3 sm:gap-4">
+              <div className="p-2 sm:p-3 bg-destructive/20 rounded-lg flex-shrink-0">
+                <Icon name="AlertTriangle" size={24} className="text-destructive sm:w-8 sm:h-8" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold mb-4">Реальность</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4">Реальность</h3>
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
                   Топ-менеджеры превратились в секретарей. 80% времени уходит на вопросы: 
                   «цена?», «адрес?», «есть в наличии?».
                 </p>
@@ -104,14 +104,14 @@ function ProblemSection() {
             </div>
           </Card>
           
-          <Card className="p-8 bg-card/50 backdrop-blur border-2 border-accent/50 hover:border-accent transition-all">
-            <div className="flex items-start gap-4">
-              <div className="p-3 bg-accent/20 rounded-lg">
-                <Icon name="TrendingDown" size={32} className="text-accent" />
+          <Card className="p-4 sm:p-6 md:p-8 bg-card/50 backdrop-blur border-2 border-accent/50 hover:border-accent transition-all">
+            <div className="flex items-start gap-3 sm:gap-4">
+              <div className="p-2 sm:p-3 bg-accent/20 rounded-lg flex-shrink-0">
+                <Icon name="TrendingDown" size={24} className="text-accent sm:w-8 sm:h-8" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold mb-4">Последствие</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4">Последствие</h3>
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
                   На «дожим» и реальные продажи нет сил. Клиенты злятся из-за долгих ответов. 
                   Рекламный бюджет сливается.
                 </p>
@@ -128,21 +128,21 @@ function BenefitsSection() {
   return (
     <section className="py-32 px-6 bg-gradient-to-b from-secondary/10 to-transparent">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl md:text-6xl font-black text-center mb-16">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-center mb-12 md:mb-16 px-4 leading-tight">
           Сколько вы теряете на <span className="gradient-text">«ручном» труде?</span>
         </h2>
         
-        <div className="overflow-x-auto">
-          <div className="min-w-[800px]">
-            <div className="grid grid-cols-3 gap-4 mb-4">
-              <div className="p-6 bg-card/30 rounded-lg">
-                <h3 className="text-xl font-bold text-center">Параметры</h3>
+        <div className="overflow-x-auto -mx-6 px-6">
+          <div className="min-w-[600px] md:min-w-0">
+            <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 mb-3 md:mb-4">
+              <div className="p-3 sm:p-4 md:p-6 bg-card/30 rounded-lg">
+                <h3 className="text-xs sm:text-sm md:text-base lg:text-xl font-bold text-center">Параметры</h3>
               </div>
-              <div className="p-6 bg-destructive/10 rounded-lg border-2 border-destructive/50">
-                <h3 className="text-xl font-bold text-center text-destructive">Менеджер (человек)</h3>
+              <div className="p-3 sm:p-4 md:p-6 bg-destructive/10 rounded-lg border-2 border-destructive/50">
+                <h3 className="text-xs sm:text-sm md:text-base lg:text-xl font-bold text-center text-destructive">Менеджер</h3>
               </div>
-              <div className="p-6 bg-primary/10 rounded-lg border-2 border-primary/50 neon-border">
-                <h3 className="text-xl font-bold text-center text-primary">ИИ-помощник</h3>
+              <div className="p-3 sm:p-4 md:p-6 bg-primary/10 rounded-lg border-2 border-primary/50 neon-border">
+                <h3 className="text-xs sm:text-sm md:text-base lg:text-xl font-bold text-center text-primary">ИИ</h3>
               </div>
             </div>
             
@@ -168,24 +168,24 @@ function BenefitsSection() {
                 ai: "Неизменно вежлив и точен"
               }
             ].map((row, i) => (
-              <div key={i} className="grid grid-cols-3 gap-4 mb-3">
-                <div className="p-6 bg-card/50 rounded-lg flex items-center">
-                  <p className="font-semibold text-lg">{row.param}</p>
+              <div key={i} className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 mb-2 md:mb-3">
+                <div className="p-3 sm:p-4 md:p-6 bg-card/50 rounded-lg flex items-center">
+                  <p className="font-semibold text-xs sm:text-sm md:text-base lg:text-lg">{row.param}</p>
                 </div>
-                <div className="p-6 bg-card/30 rounded-lg flex items-center">
-                  <p className="text-muted-foreground">{row.human}</p>
+                <div className="p-3 sm:p-4 md:p-6 bg-card/30 rounded-lg flex items-center">
+                  <p className="text-muted-foreground text-xs sm:text-sm md:text-base">{row.human}</p>
                 </div>
-                <div className="p-6 bg-primary/5 rounded-lg flex items-center border border-primary/30">
-                  <p className="text-primary font-semibold">{row.ai}</p>
+                <div className="p-3 sm:p-4 md:p-6 bg-primary/5 rounded-lg flex items-center border border-primary/30">
+                  <p className="text-primary font-semibold text-xs sm:text-sm md:text-base">{row.ai}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
         
-        <div className="mt-16 text-center">
-          <Card className="inline-block p-8 bg-gradient-to-r from-primary/20 to-secondary/20 border-2 border-primary">
-            <p className="text-3xl font-black">
+        <div className="mt-12 md:mt-16 text-center px-4">
+          <Card className="inline-block p-4 sm:p-6 md:p-8 bg-gradient-to-r from-primary/20 to-secondary/20 border-2 border-primary">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black leading-tight">
               <span className="text-primary neon-glow">Нейросеть</span> в 2 раза дешевле и в 10 раз быстрее
             </p>
           </Card>
@@ -199,18 +199,18 @@ function ComparisonSection() {
   return (
     <section className="py-32 px-6">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl md:text-6xl font-black text-center mb-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-center mb-6 md:mb-8 px-4 leading-tight">
           Почему наше решение стоит <span className="gradient-text">85 000 сом</span>
         </h2>
-        <p className="text-2xl text-center text-muted-foreground mb-16">(а не 30 000)</p>
+        <p className="text-lg sm:text-xl md:text-2xl text-center text-muted-foreground mb-12 md:mb-16 px-4">(а не 30 000)</p>
         
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card className="p-10 bg-card/30 border-2 border-muted hover:border-muted/50 transition-all">
-            <div className="flex items-center gap-4 mb-6">
-              <Icon name="XCircle" size={40} className="text-destructive" />
-              <h3 className="text-3xl font-bold">Дешевый бот (30к)</h3>
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+          <Card className="p-6 sm:p-8 md:p-10 bg-card/30 border-2 border-muted hover:border-muted/50 transition-all">
+            <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+              <Icon name="XCircle" size={32} className="text-destructive sm:w-10 sm:h-10" />
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold">Дешевый бот (30к)</h3>
             </div>
-            <ul className="space-y-4 text-lg text-muted-foreground">
+            <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg text-muted-foreground">
               <li className="flex items-start gap-3">
                 <Icon name="Minus" className="mt-1 text-destructive" />
                 <span>Шаблонные фразы</span>
@@ -226,12 +226,12 @@ function ComparisonSection() {
             </ul>
           </Card>
           
-          <Card className="p-10 bg-gradient-to-br from-primary/10 to-secondary/10 border-2 border-primary neon-border">
-            <div className="flex items-center gap-4 mb-6">
-              <Icon name="CheckCircle2" size={40} className="text-primary" />
-              <h3 className="text-3xl font-bold text-primary">Наш ИИ-клон (85к)</h3>
+          <Card className="p-6 sm:p-8 md:p-10 bg-gradient-to-br from-primary/10 to-secondary/10 border-2 border-primary neon-border">
+            <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+              <Icon name="CheckCircle2" size={32} className="text-primary sm:w-10 sm:h-10" />
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary">Наш ИИ-клон (85к)</h3>
             </div>
-            <ul className="space-y-4 text-lg">
+            <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg">
               <li className="flex items-start gap-3">
                 <Icon name="Check" className="mt-1 text-primary" />
                 <div>
@@ -265,21 +265,21 @@ function HybridSection() {
   return (
     <section className="py-32 px-6 bg-gradient-to-b from-transparent via-secondary/10 to-transparent">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl md:text-6xl font-black text-center mb-16">
-          ИИ не заменяет людей, <br />он дает им <span className="gradient-text">«суперсилу»</span>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-center mb-12 md:mb-16 px-4 leading-tight">
+          ИИ не заменяет людей, <br className="hidden sm:block" />он дает им <span className="gradient-text">«суперсилу»</span>
         </h2>
         
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <Card className="p-10 bg-primary/10 border-2 border-primary">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-primary/20 rounded-full">
-                <Icon name="Bot" size={48} className="text-primary" />
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <Card className="p-6 sm:p-8 md:p-10 bg-primary/10 border-2 border-primary">
+            <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+              <div className="p-3 sm:p-4 bg-primary/20 rounded-full">
+                <Icon name="Bot" size={36} className="text-primary sm:w-12 sm:h-12" />
               </div>
               <div>
-                <h3 className="text-3xl font-bold text-primary">ИИ (1-я линия)</h3>
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary">ИИ (1-я линия)</h3>
               </div>
             </div>
-            <ul className="space-y-4 text-lg">
+            <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg">
               <li className="flex items-start gap-3">
                 <Icon name="Zap" className="mt-1 text-primary" />
                 <span>Моментальный перехват</span>
@@ -295,17 +295,17 @@ function HybridSection() {
             </ul>
           </Card>
           
-          <Card className="p-10 bg-secondary/10 border-2 border-secondary">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-secondary/20 rounded-full">
-                <Icon name="User" size={48} className="text-secondary" />
+          <Card className="p-6 sm:p-8 md:p-10 bg-secondary/10 border-2 border-secondary">
+            <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+              <div className="p-3 sm:p-4 bg-secondary/20 rounded-full">
+                <Icon name="User" size={36} className="text-secondary sm:w-12 sm:h-12" />
               </div>
               <div>
-                <h3 className="text-3xl font-bold text-secondary">Менеджер (Закрытие)</h3>
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-secondary">Менеджер (Закрытие)</h3>
               </div>
             </div>
-            <p className="text-xl leading-relaxed">
-              Получает готовое досье и закрывает <span className="text-secondary font-bold text-3xl">5 сделок</span> вместо <span className="line-through text-muted-foreground">3</span>
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed">
+              Получает готовое досье и закрывает <span className="text-secondary font-bold text-2xl sm:text-3xl">5 сделок</span> вместо <span className="line-through text-muted-foreground">3</span>
             </p>
           </Card>
         </div>
@@ -318,30 +318,30 @@ function ExpertiseSection() {
   return (
     <section className="py-32 px-6">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12">
-          <Badge variant="outline" className="neon-border px-6 py-2 text-lg mb-6">
+        <div className="text-center mb-12 px-4">
+          <Badge variant="outline" className="neon-border px-4 py-1.5 text-sm sm:text-base lg:text-lg mb-6">
             Экспертность
           </Badge>
-          <h2 className="text-4xl md:text-6xl font-black mb-8">
-            Автоматизация от <span className="gradient-text">бизнесмена</span>, <br />а не от программиста
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 md:mb-8 leading-tight">
+            Автоматизация от <span className="gradient-text">бизнесмена</span>, <br className="hidden sm:block" />а не от программиста
           </h2>
         </div>
         
-        <Card className="p-12 bg-gradient-to-br from-card to-card/50 border-2 border-primary/50">
-          <div className="space-y-6 text-lg leading-relaxed">
+        <Card className="p-6 sm:p-8 md:p-10 lg:p-12 bg-gradient-to-br from-card to-card/50 border-2 border-primary/50">
+          <div className="space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg leading-relaxed">
             <div>
-              <span className="font-bold text-primary text-xl">Автор:</span>
-              <span className="text-xl"> Петр, экс-руководитель «ЭСТО Консалтинг» и «Alexandra»</span>
+              <span className="font-bold text-primary text-base sm:text-lg md:text-xl">Автор:</span>
+              <span className="text-base sm:text-lg md:text-xl"> Петр, экс-руководитель «ЭСТО Консалтинг» и «Alexandra»</span>
             </div>
             
             <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
             
-            <p className="text-xl">
+            <p className="text-base sm:text-lg md:text-xl">
               <span className="font-bold text-secondary">Подход:</span> Я внедряю не код, а систему продаж. 
               Знаю боли бизнеса в Бишкеке изнутри: от текучки кадров до слива лидов.
             </p>
             
-            <p className="text-xl font-semibold text-primary">
+            <p className="text-base sm:text-lg md:text-xl font-semibold text-primary">
               Лично проектирую логику вашего ИИ-продавца.
             </p>
           </div>
@@ -355,13 +355,13 @@ function TestDriveSection() {
   return (
     <section className="py-32 px-6 bg-gradient-to-b from-primary/5 to-transparent">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-black mb-6">
-            Посмотрите на своего <span className="gradient-text">«Цифрового двойника»</span> <br />в деле до основной оплаты
+        <div className="text-center mb-12 md:mb-16 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 leading-tight">
+            Посмотрите на своего <span className="gradient-text">«Цифрового двойника»</span> <br className="hidden sm:block" />в деле до основной оплаты
           </h2>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
           {[
             {
               step: "1",
@@ -382,24 +382,24 @@ function TestDriveSection() {
               desc: "По ссылке"
             }
           ].map((item) => (
-            <Card key={item.step} className="p-8 bg-card/50 border-2 border-primary/30 hover:border-primary transition-all text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/20 rounded-full mb-6">
-                <span className="text-3xl font-black text-primary">{item.step}</span>
+            <Card key={item.step} className="p-6 sm:p-8 bg-card/50 border-2 border-primary/30 hover:border-primary transition-all text-center">
+              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-primary/20 rounded-full mb-4 sm:mb-6">
+                <span className="text-2xl sm:text-3xl font-black text-primary">{item.step}</span>
               </div>
-              <div className="flex justify-center mb-4">
-                <Icon name={item.icon as any} size={48} className="text-primary" />
+              <div className="flex justify-center mb-3 sm:mb-4">
+                <Icon name={item.icon as any} size={36} className="text-primary sm:w-12 sm:h-12" />
               </div>
-              <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
-              <p className="text-lg text-muted-foreground">{item.desc}</p>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">{item.title}</h3>
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground">{item.desc}</p>
             </Card>
           ))}
         </div>
         
-        <Card className="p-12 bg-gradient-to-r from-primary/20 to-secondary/20 border-2 border-primary text-center">
-          <p className="text-3xl font-bold mb-6">
-            Цена: <span className="text-primary text-5xl">5 000 сом</span>
+        <Card className="p-6 sm:p-8 md:p-10 lg:p-12 bg-gradient-to-r from-primary/20 to-secondary/20 border-2 border-primary text-center">
+          <p className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6">
+            Цена: <span className="text-primary text-3xl sm:text-4xl md:text-5xl">5 000 сом</span>
           </p>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
             Если результат не устроит — мы не продолжаем
           </p>
         </Card>
@@ -412,22 +412,22 @@ function InvestmentSection() {
   return (
     <section className="py-32 px-6">
       <div className="container mx-auto max-w-4xl text-center">
-        <h2 className="text-4xl md:text-6xl font-black mb-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-8 md:mb-12 px-4 leading-tight">
           Инвестиция в <span className="gradient-text">актив</span>
         </h2>
         
-        <Card className="p-12 bg-card/50 border-2 border-secondary/50">
-          <h3 className="text-3xl font-bold mb-8 text-secondary">Окупаемость за 3 месяца</h3>
+        <Card className="p-6 sm:p-8 md:p-10 lg:p-12 bg-card/50 border-2 border-secondary/50">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-secondary">Окупаемость за 3 месяца</h3>
           
-          <div className="space-y-6 text-xl leading-relaxed">
+          <div className="space-y-4 sm:space-y-6 text-base sm:text-lg md:text-xl leading-relaxed">
             <p>
-              Вы платите <span className="text-primary font-bold text-3xl">85 000 сом</span> один раз 
+              Вы платите <span className="text-primary font-bold text-xl sm:text-2xl md:text-3xl">85 000 сом</span> один раз 
               за бессмертного сотрудника.
             </p>
             
             <div className="h-px bg-gradient-to-r from-transparent via-secondary to-transparent" />
             
-            <p className="text-2xl font-semibold">
+            <p className="text-lg sm:text-xl md:text-2xl font-semibold">
               Он не унесет базу, не попросит отпуск и будет приносить деньги <span className="text-secondary">годами</span>.
             </p>
           </div>
@@ -462,22 +462,22 @@ function TestimonialsSection() {
   return (
     <section className="py-32 px-6 bg-gradient-to-b from-transparent to-secondary/10">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl md:text-6xl font-black text-center mb-16">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-center mb-12 md:mb-16 px-4 leading-tight">
           Что говорят <span className="gradient-text">клиенты</span>
         </h2>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {testimonials.map((testimonial, i) => (
-            <Card key={i} className="p-8 bg-card/50 border-2 border-primary/30 hover:border-primary transition-all">
+            <Card key={i} className="p-6 sm:p-8 bg-card/50 border-2 border-primary/30 hover:border-primary transition-all">
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, j) => (
                   <Icon key={j} name="Star" size={20} className="text-primary fill-primary" />
                 ))}
               </div>
-              <p className="text-lg mb-6 leading-relaxed text-muted-foreground">"{testimonial.text}"</p>
-              <div className="border-t border-primary/30 pt-4">
-                <p className="font-bold text-lg">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+              <p className="text-sm sm:text-base md:text-lg mb-4 sm:mb-6 leading-relaxed text-muted-foreground">"{testimonial.text}"</p>
+              <div className="border-t border-primary/30 pt-3 sm:pt-4">
+                <p className="font-bold text-base sm:text-lg">{testimonial.name}</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">{testimonial.company}</p>
               </div>
             </Card>
           ))}
@@ -514,21 +514,21 @@ function FAQSection() {
   return (
     <section className="py-32 px-6">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-4xl md:text-6xl font-black text-center mb-16">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-center mb-12 md:mb-16 px-4 leading-tight">
           Частые <span className="gradient-text">вопросы</span>
         </h2>
         
-        <Accordion type="single" collapsible className="space-y-4">
+        <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
           {faqs.map((faq, i) => (
             <AccordionItem 
               key={i} 
               value={`item-${i}`} 
-              className="border-2 border-primary/30 rounded-lg px-6 bg-card/50"
+              className="border-2 border-primary/30 rounded-lg px-4 sm:px-6 bg-card/50"
             >
-              <AccordionTrigger className="text-xl font-bold hover:text-primary">
+              <AccordionTrigger className="text-base sm:text-lg md:text-xl font-bold hover:text-primary">
                 {faq.q}
               </AccordionTrigger>
-              <AccordionContent className="text-lg text-muted-foreground leading-relaxed">
+              <AccordionContent className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
                 {faq.a}
               </AccordionContent>
             </AccordionItem>
@@ -543,37 +543,37 @@ function FinalCTASection() {
   return (
     <section className="py-32 px-6 bg-gradient-to-b from-secondary/10 to-transparent">
       <div className="container mx-auto max-w-4xl text-center">
-        <Badge variant="outline" className="neon-border px-6 py-3 text-xl mb-8">
+        <Badge variant="outline" className="neon-border px-4 sm:px-6 py-2 sm:py-3 text-base sm:text-lg md:text-xl mb-6 sm:mb-8">
           Ограниченное предложение
         </Badge>
         
-        <h2 className="text-4xl md:text-6xl font-black mb-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 sm:mb-8 px-4 leading-tight">
           Берем только <span className="gradient-text">3 проекта</span> в месяц
         </h2>
         
-        <p className="text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
           Чтобы гарантировать качество внедрения, я ограничиваю количество заказов.
         </p>
         
         <Button 
           size="lg" 
-          className="text-2xl px-16 py-10 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-black"
+          className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl px-6 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6 md:py-8 lg:py-10 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-black w-full sm:w-auto"
         >
-          <Icon name="Rocket" className="mr-4" size={32} />
-          ЗАБРОНИРОВАТЬ ТЕСТ-ДРАЙВ ЗА 5000 СОМ
+          <Icon name="Rocket" className="mr-2 sm:mr-3 md:mr-4" size={24} />
+          <span className="leading-tight">ЗАБРОНИРОВАТЬ ТЕСТ-ДРАЙВ<br className="sm:hidden" /> ЗА 5000 СОМ</span>
         </Button>
         
-        <div className="mt-16 flex justify-center gap-8 text-muted-foreground">
-          <div className="flex items-center gap-2">
-            <Icon name="Shield" className="text-primary" />
+        <div className="mt-12 sm:mt-16 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 md:gap-8 text-sm sm:text-base text-muted-foreground px-4">
+          <div className="flex items-center justify-center gap-2">
+            <Icon name="Shield" className="text-primary" size={20} />
             <span>Гарантия возврата</span>
           </div>
-          <div className="flex items-center gap-2">
-            <Icon name="Clock" className="text-primary" />
+          <div className="flex items-center justify-center gap-2">
+            <Icon name="Clock" className="text-primary" size={20} />
             <span>Быстрый запуск</span>
           </div>
-          <div className="flex items-center gap-2">
-            <Icon name="Users" className="text-primary" />
+          <div className="flex items-center justify-center gap-2">
+            <Icon name="Users" className="text-primary" size={20} />
             <span>Личная поддержка</span>
           </div>
         </div>
