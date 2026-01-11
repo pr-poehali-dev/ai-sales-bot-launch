@@ -88,7 +88,7 @@ function ProblemSection() {
       <div className="container mx-auto max-w-6xl">
         <div className="text-left sm:text-center mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 gradient-text leading-tight">
-            Почему 50 заявок в день это слив рекламного бюджета
+            Как работает ваш отдел продаж, когда отвечает одновременно на 50 заявок в день
           </h2>
         </div>
         
