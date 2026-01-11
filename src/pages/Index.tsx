@@ -773,10 +773,6 @@ function FinalCTASection() {
         
         <div className="mt-12 sm:mt-16 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 md:gap-8 text-sm sm:text-base text-muted-foreground px-4">
           <div className="flex items-center justify-center gap-2">
-            <Icon name="Shield" className="text-primary" size={20} />
-            <span>Гарантия возврата</span>
-          </div>
-          <div className="flex items-center justify-center gap-2">
             <Icon name="Clock" className="text-primary" size={20} />
             <span>Быстрый запуск</span>
           </div>
