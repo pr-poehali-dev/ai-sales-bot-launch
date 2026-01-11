@@ -91,7 +91,7 @@ function ProblemSection() {
         </div>
         
         <div className="mb-12 flex justify-center">
-          <div className="relative max-w-2xl w-full rounded-2xl overflow-hidden border-4 border-destructive/50">
+          <div className="relative max-w-xl w-full rounded-2xl overflow-hidden border-4 border-destructive/50">
             <img 
               src="https://cdn.poehali.dev/projects/ba5fe4a4-8925-4895-b042-679829051f5f/files/74a3985c-0414-4ee7-8a48-08251955f25b.jpg" 
               alt="Уставший менеджер за компьютером" 
@@ -130,7 +130,7 @@ function ProblemSection() {
               <div>
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4">Реальность</h3>
                 <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Топ-менеджеры превратились в секретарей. 80% времени уходит на вопросы: 
+                  Ваш менеджер превратился в секретаря - 80% времени уходит на вопросы: 
                   «цена?», «адрес?», «есть в наличии?».
                 </p>
               </div>
