@@ -86,8 +86,20 @@ function ProblemSection() {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 gradient-text leading-tight">
-            Почему 50 заявок в день — это ловушка, съедающая прибыль?
+            Почему 50 заявок в день это слив рекламного бюджета
           </h2>
+        </div>
+        
+        <div className="mb-12 flex justify-center">
+          <div className="relative max-w-2xl w-full rounded-2xl overflow-hidden border-4 border-destructive/50">
+            <img 
+              src="https://cdn.poehali.dev/projects/ba5fe4a4-8925-4895-b042-679829051f5f/files/74a3985c-0414-4ee7-8a48-08251955f25b.jpg" 
+              alt="Уставший менеджер за компьютером" 
+              className="w-full h-auto object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         </div>
         
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
