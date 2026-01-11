@@ -398,7 +398,7 @@ function HybridSection() {
 function ExpertiseSection() {
   return (
     <section className="py-32 px-6">
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12 px-4">
           <Badge variant="outline" className="neon-border px-4 py-1.5 text-sm sm:text-base lg:text-lg mb-6">
             Экспертность
@@ -408,25 +408,36 @@ function ExpertiseSection() {
           </h2>
         </div>
         
-        <Card className="p-6 sm:p-8 md:p-10 lg:p-12 bg-gradient-to-br from-card to-card/50 border-2 border-primary/50">
-          <div className="space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg leading-relaxed">
-            <div>
-              <span className="font-bold text-primary text-base sm:text-lg md:text-xl">Автор:</span>
-              <span className="text-base sm:text-lg md:text-xl"> Петр, экс-руководитель «ЭСТО Консалтинг» и «Alexandra»</span>
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="relative">
+            <div className="aspect-[3/4] rounded-2xl overflow-hidden border-4 border-primary/50 neon-border">
+              <img 
+                src="https://cdn.poehali.dev/files/Сжать.jpg" 
+                alt="Петр — автор системы"
+                className="w-full h-full object-cover"
+              />
             </div>
-            
-            <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
-            
-            <p className="text-base sm:text-lg md:text-xl">
-              <span className="font-bold text-secondary">Подход:</span> Я внедряю не код, а систему продаж. 
-              Знаю боли бизнеса в Бишкеке изнутри: от текучки кадров до слива лидов.
-            </p>
-            
-            <p className="text-base sm:text-lg md:text-xl font-semibold text-primary">
-              Лично проектирую логику вашего ИИ-продавца.
-            </p>
           </div>
-        </Card>
+          
+          <Card className="p-6 sm:p-8 md:p-10 bg-gradient-to-br from-card to-card/50 border-2 border-primary/50">
+            <div className="space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg leading-relaxed">
+              <div>
+                <span className="font-bold text-primary text-base sm:text-lg md:text-xl">Автор:</span>
+                <span className="text-base sm:text-lg md:text-xl"> Петр, экс-руководитель «ЭСТО Консалтинг» и «Alexandra»</span>
+              </div>
+              
+              <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
+              
+              <p className="text-base sm:text-lg md:text-xl">
+                Знаю боли бизнеса в Бишкеке изнутри: от текучки кадров до долгих ответов, когда клиент остывает, а сотрудник не понимает этого.
+              </p>
+              
+              <p className="text-base sm:text-lg md:text-xl font-semibold text-primary">
+                Лично проектирую логику вашего ИИ-продавца.
+              </p>
+            </div>
+          </Card>
+        </div>
       </div>
     </section>
   );
