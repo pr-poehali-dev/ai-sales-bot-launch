@@ -107,7 +107,7 @@ function ProblemSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
           <Card className="p-4 sm:p-6 bg-destructive/10 border-2 border-destructive/50 text-center">
             <div className="text-3xl sm:text-4xl md:text-5xl font-black text-destructive mb-2">80%</div>
-            <p className="text-xs sm:text-sm md:text-base text-muted-foreground">времени на рутину</p>
+            <p className="text-xs sm:text-sm md:text-base text-muted-foreground">времени на одни и те же вопросы</p>
           </Card>
           <Card className="p-4 sm:p-6 bg-destructive/10 border-2 border-destructive/50 text-center">
             <div className="text-3xl sm:text-4xl md:text-5xl font-black text-destructive mb-2">40%</div>
