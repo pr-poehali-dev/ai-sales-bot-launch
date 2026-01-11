@@ -117,8 +117,8 @@ function ProblemSection() {
             <p className="text-xs sm:text-sm md:text-base text-muted-foreground">среднее время ответа</p>
           </Card>
           <Card className="p-4 sm:p-6 bg-destructive/10 border-2 border-destructive/50 text-center">
-            <div className="text-3xl sm:text-4xl md:text-5xl font-black text-destructive mb-2">60%</div>
-            <p className="text-xs sm:text-sm md:text-base text-muted-foreground">выгорание за год</p>
+            <div className="text-3xl sm:text-4xl md:text-5xl font-black text-destructive mb-2">70%</div>
+            <p className="text-xs sm:text-sm md:text-base text-muted-foreground">текучка кадров за полгода</p>
           </Card>
         </div>
         
