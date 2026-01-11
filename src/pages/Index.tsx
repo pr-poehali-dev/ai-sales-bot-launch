@@ -42,16 +42,26 @@ function HeroSection() {
       </div>
       
       <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="text-left sm:text-center space-y-8 animate-fade-in">
+        <div className="text-left sm:text-center space-y-6 sm:space-y-8 animate-fade-in">
           <Badge variant="outline" className="neon-border px-3 py-1.5 text-xs sm:text-sm md:text-base lg:text-lg">
             Для владельцев бизнеса в Бишкеке (трафик от 50 заявок/день)
           </Badge>
           
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight">
-            Хватит выбрасывать деньги на рекламу впустую. Ваши менеджеры сливают до <span className="gradient-text">40% бюджета</span>, потому что долго отвечают, забывают перезвонить или просто теряют заявки в куче чатов. Внедрите ИИ-систему, которая подхватывает каждого клиента за 12 секунд.
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight">
+            Хватит выбрасывать деньги на рекламу впустую
           </h1>
           
-          <div className="pt-8">
+          <div className="space-y-4 sm:space-y-6 max-w-5xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground leading-relaxed">
+              Ваши менеджеры сливают до <span className="gradient-text font-bold">40% бюджета</span>, потому что долго отвечают, забывают перезвонить или просто теряют заявки в куче чатов.
+            </p>
+            
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/90 leading-relaxed">
+              Внедрите ИИ-систему, которая подхватывает каждого клиента за <span className="text-primary font-bold">12 секунд</span>.
+            </p>
+          </div>
+          
+          <div className="pt-4 sm:pt-8">
             <a href="#problem">
               <Button 
                 size="lg" 
