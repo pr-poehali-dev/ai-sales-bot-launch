@@ -36,6 +36,8 @@ function HeroSection() {
           src="https://cdn.poehali.dev/projects/ba5fe4a4-8925-4895-b042-679829051f5f/files/29b020d3-7526-4efc-bb77-15e7d270fe4a.jpg" 
           alt="" 
           className="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
         />
       </div>
       
