@@ -293,6 +293,48 @@ function ComparisonSection() {
                 </p>
               </div>
             </div>
+            
+            <div className="flex items-start gap-4 sm:gap-6">
+              <div className="flex-shrink-0 p-3 sm:p-4 bg-primary/20 rounded-lg">
+                <Icon name="BellRing" size={32} className="text-primary sm:w-10 sm:h-10" />
+              </div>
+              <div>
+                <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-primary mb-2 sm:mb-3">
+                  Дожим
+                </h4>
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
+                  Он сам вежливо напомнит о себе, если клиент пропал.
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex items-start gap-4 sm:gap-6">
+              <div className="flex-shrink-0 p-3 sm:p-4 bg-primary/20 rounded-lg">
+                <Icon name="Network" size={32} className="text-primary sm:w-10 sm:h-10" />
+              </div>
+              <div>
+                <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-primary mb-2 sm:mb-3">
+                  Полноценная схема взаимодействия с живыми сотрудниками
+                </h4>
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
+                  Передает уведомления через Telegram или CRM, чтобы ваши менеджеры далее связались с клиентом и закрыли сделку
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex items-start gap-4 sm:gap-6">
+              <div className="flex-shrink-0 p-3 sm:p-4 bg-primary/20 rounded-lg">
+                <Icon name="Database" size={32} className="text-primary sm:w-10 sm:h-10" />
+              </div>
+              <div>
+                <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-primary mb-2 sm:mb-3">
+                  Автоматическое ведение CRM
+                </h4>
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
+                  Заполняет поля CRM и передвигает сделку на этапы продаж без напоминаний от руководителя
+                </p>
+              </div>
+            </div>
           </div>
         </Card>
       </div>
