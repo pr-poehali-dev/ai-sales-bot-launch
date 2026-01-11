@@ -68,7 +68,7 @@ function HeroSection() {
               className="text-sm sm:text-base md:text-lg lg:text-xl px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-5 md:py-6 lg:py-8 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-bold w-full sm:w-auto"
             >
               <Icon name="Sparkles" className="mr-2 sm:mr-3" size={20} />
-              <span className="leading-tight">Получить тестовую версию<br className="sm:hidden" /> за 5 000 сом</span>
+              <span className="leading-tight">Узнать подробнее</span>
             </Button>
           </div>
         </div>
@@ -230,11 +230,20 @@ function NichesSection() {
         </div>
 
         <div className="mt-12 md:mt-16 text-left sm:text-center">
-          <Card className="inline-block p-6 sm:p-8 bg-gradient-to-r from-primary/20 to-secondary/20 border-2 border-primary neon-border">
+          <Card className="inline-block p-6 sm:p-8 bg-gradient-to-r from-primary/20 to-secondary/20 border-2 border-primary neon-border mb-8">
             <p className="text-lg sm:text-xl md:text-2xl font-black">
               <span className="text-primary neon-glow">Каждый бот</span> настроен под вашу нишу и цели
             </p>
           </Card>
+          <div>
+            <Button 
+              size="lg" 
+              className="text-sm sm:text-base md:text-lg lg:text-xl px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-bold w-full sm:w-auto"
+            >
+              <Icon name="Zap" className="mr-2 sm:mr-3" size={20} />
+              Хочу протестировать
+            </Button>
+          </div>
         </div>
       </div>
     </section>
@@ -454,6 +463,18 @@ function ComparisonSection() {
             </div>
           </div>
         </Card>
+        
+        <div className="mt-12 md:mt-16 text-center">
+          <a href="#test-drive">
+            <Button 
+              size="lg" 
+              className="text-sm sm:text-base md:text-lg lg:text-xl px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-bold w-full sm:w-auto"
+            >
+              <Icon name="Zap" className="mr-2 sm:mr-3" size={20} />
+              Хочу протестировать
+            </Button>
+          </a>
+        </div>
       </div>
     </section>
   );
@@ -562,7 +583,7 @@ function ExpertiseSection() {
 
 function TestDriveSection() {
   return (
-    <section className="py-32 px-6 bg-gradient-to-b from-primary/5 to-transparent">
+    <section id="test-drive" className="py-32 px-6 bg-gradient-to-b from-primary/5 to-transparent">
       <div className="container mx-auto max-w-6xl">
         <div className="text-left sm:text-center mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 leading-tight">
