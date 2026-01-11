@@ -29,7 +29,7 @@ export default function Index() {
 
 function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 py-20">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-secondary/10" />
       <div className="absolute inset-0 opacity-20">
         <img 
@@ -45,21 +45,21 @@ function HeroSection() {
             Для владельцев бизнеса в Бишкеке (трафик от 50 заявок/день)
           </Badge>
           
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight px-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight">
             Перестаньте платить менеджерам за{" "}
             <span className="gradient-text">«работу автоответчиком»</span>
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto px-4">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto">
             Платите за <span className="text-primary font-bold">ПРОДАЖИ</span>
           </p>
           
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/80 max-w-3xl mx-auto px-4">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/80 max-w-3xl mx-auto">
             Внедрите ИИ-ассистента для первичной обработки 100% обращений. 
             Ваша команда работает только с «горячими» клиентами.
           </p>
           
-          <div className="pt-8 px-4">
+          <div className="pt-8">
             <Button 
               size="lg" 
               className="text-sm sm:text-base md:text-lg lg:text-xl px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-5 md:py-6 lg:py-8 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-bold w-full sm:w-auto"
@@ -80,9 +80,9 @@ function HeroSection() {
 
 function ProblemSection() {
   return (
-    <section className="py-32 px-6 relative">
+    <section className="py-32 px-4 sm:px-6 relative">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16 px-4">
+        <div className="text-center mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 gradient-text leading-tight">
             Почему 50 заявок в день — это ловушка, съедающая прибыль?
           </h2>
@@ -197,7 +197,7 @@ function BenefitsSection() {
 
 function ComparisonSection() {
   return (
-    <section className="py-32 px-6">
+    <section className="py-32 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-center mb-6 md:mb-8 px-4 leading-tight">
           Наша цена составляет — <span className="gradient-text">85 000 сом</span>
@@ -397,9 +397,9 @@ function HybridSection() {
 
 function ExpertiseSection() {
   return (
-    <section className="py-32 px-6">
+    <section className="py-32 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12 px-4">
+        <div className="text-center mb-12">
           <Badge variant="outline" className="neon-border px-4 py-1.5 text-sm sm:text-base lg:text-lg mb-6">
             Экспертность
           </Badge>
@@ -447,7 +447,7 @@ function TestDriveSection() {
   return (
     <section className="py-32 px-6 bg-gradient-to-b from-primary/5 to-transparent">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12 md:mb-16 px-4">
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 leading-tight">
             Посмотрите на своего <span className="gradient-text">«Цифрового двойника»</span> <br className="hidden sm:block" />в деле до основной оплаты
           </h2>
@@ -502,7 +502,7 @@ function TestDriveSection() {
 
 function InvestmentSection() {
   return (
-    <section className="py-32 px-6">
+    <section className="py-32 px-4 sm:px-6">
       <div className="container mx-auto max-w-4xl text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-8 md:mb-12 px-4 leading-tight">
           Инвестиция в <span className="gradient-text">актив</span>
@@ -604,7 +604,7 @@ function FAQSection() {
   ];
 
   return (
-    <section className="py-32 px-6">
+    <section className="py-32 px-4 sm:px-6">
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-center mb-12 md:mb-16 px-4 leading-tight">
           Частые <span className="gradient-text">вопросы</span>
