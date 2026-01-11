@@ -92,7 +92,7 @@ function ProblemSection() {
         </div>
         
         <div className="mb-12 flex justify-center">
-          <div className="relative max-w-xl w-full rounded-2xl overflow-hidden border-4 border-destructive/50">
+          <div className="relative max-w-md w-full rounded-2xl overflow-hidden border-4 border-destructive/50">
             <img 
               src="https://cdn.poehali.dev/projects/ba5fe4a4-8925-4895-b042-679829051f5f/files/74a3985c-0414-4ee7-8a48-08251955f25b.jpg" 
               alt="Уставший менеджер за компьютером" 
