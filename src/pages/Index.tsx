@@ -200,62 +200,101 @@ function ComparisonSection() {
     <section className="py-32 px-6">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-center mb-6 md:mb-8 px-4 leading-tight">
-          Почему наше решение стоит <span className="gradient-text">85 000 сом</span>
+          Наша цена составляет — <span className="gradient-text">85 000 сом</span>
         </h2>
-        <p className="text-lg sm:text-xl md:text-2xl text-center text-muted-foreground mb-12 md:mb-16 px-4">(а не 30 000)</p>
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-center text-muted-foreground mb-12 md:mb-16 px-4 max-w-4xl mx-auto">
+          В городе вы можете сделать бота и за 30 000 сом, но почему у нас дороже?
+        </p>
         
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-          <Card className="p-6 sm:p-8 md:p-10 bg-card/30 border-2 border-muted hover:border-muted/50 transition-all">
-            <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-              <Icon name="XCircle" size={32} className="text-destructive sm:w-10 sm:h-10" />
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold">Дешевый бот (30к)</h3>
-            </div>
-            <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg text-muted-foreground">
-              <li className="flex items-start gap-3">
-                <Icon name="Minus" className="mt-1 text-destructive" />
-                <span>Шаблонные фразы</span>
+        <div className="mb-12 md:mb-16">
+          <Card className="p-6 sm:p-8 md:p-10 bg-card/50 border-2 border-destructive/50">
+            <p className="text-base sm:text-lg md:text-xl text-center mb-6 md:mb-8 font-semibold">
+              На рынке полно предложений сделать бота за копейки. Но вы получите «робота», который:
+            </p>
+            
+            <ul className="space-y-4 sm:space-y-5 max-w-3xl mx-auto">
+              <li className="flex items-start gap-3 sm:gap-4">
+                <div className="flex-shrink-0 p-2 bg-destructive/20 rounded-lg">
+                  <Icon name="XCircle" size={24} className="text-destructive" />
+                </div>
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
+                  По два раза здоровается и общается как автоответчик, а не продавец
+                </p>
               </li>
-              <li className="flex items-start gap-3">
-                <Icon name="Minus" className="mt-1 text-destructive" />
-                <span>Тупит на сложных вопросах</span>
+              <li className="flex items-start gap-3 sm:gap-4">
+                <div className="flex-shrink-0 p-2 bg-destructive/20 rounded-lg">
+                  <Icon name="XCircle" size={24} className="text-destructive" />
+                </div>
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
+                  Тупит на простых вопросах и бесит ваших клиентов
+                </p>
               </li>
-              <li className="flex items-start gap-3">
-                <Icon name="Minus" className="mt-1 text-destructive" />
-                <span>Бесит клиентов фразой «оставьте номер, вам перезвонят»</span>
+              <li className="flex items-start gap-3 sm:gap-4">
+                <div className="flex-shrink-0 p-2 bg-destructive/20 rounded-lg">
+                  <Icon name="XCircle" size={24} className="text-destructive" />
+                </div>
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
+                  Если клиент напишет чуть сложнее — бот «зависает»
+                </p>
+              </li>
+              <li className="flex items-start gap-3 sm:gap-4">
+                <div className="flex-shrink-0 p-2 bg-destructive/20 rounded-lg">
+                  <Icon name="XCircle" size={24} className="text-destructive" />
+                </div>
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
+                  Действует по сценарию, который не заинтересовывает клиента
+                </p>
               </li>
             </ul>
-          </Card>
-          
-          <Card className="p-6 sm:p-8 md:p-10 bg-gradient-to-br from-primary/10 to-secondary/10 border-2 border-primary neon-border">
-            <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-              <Icon name="CheckCircle2" size={32} className="text-primary sm:w-10 sm:h-10" />
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary">Наш ИИ-клон (85к)</h3>
+            
+            <div className="mt-8 md:mt-10 p-4 sm:p-6 bg-destructive/10 border-2 border-destructive/50 rounded-lg">
+              <p className="text-base sm:text-lg md:text-xl font-bold text-center">
+                В итоге: <span className="text-destructive">Клиент видит, что с ним говорит глупая программа, и уходит.</span> Вы потеряли в разы больше, чем сэкономили.
+              </p>
             </div>
-            <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg">
-              <li className="flex items-start gap-3">
-                <Icon name="Check" className="mt-1 text-primary" />
-                <div>
-                  <span className="font-bold text-primary">Живой диалог:</span>
-                  <span className="text-muted-foreground"> Понимает контекст и сленг</span>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Icon name="Check" className="mt-1 text-primary" />
-                <div>
-                  <span className="font-bold text-primary">Экспертность:</span>
-                  <span className="text-muted-foreground"> Считает сметы, проверяет остатки в базе, ведет клиента по скрипту до сделки</span>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Icon name="Check" className="mt-1 text-primary" />
-                <div>
-                  <span className="font-bold text-primary">Автономность:</span>
-                  <span className="text-muted-foreground"> Сам «дожимает» пропавших клиентов и заполняет CRM без участия человека</span>
-                </div>
-              </li>
-            </ul>
           </Card>
         </div>
+        
+        <Card className="p-6 sm:p-8 md:p-10 lg:p-12 bg-gradient-to-br from-primary/10 to-secondary/10 border-2 border-primary neon-border">
+          <div className="text-center mb-8 md:mb-10">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black mb-4">
+              Моя система за <span className="text-primary neon-glow">85 000 сом</span>
+            </h3>
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground">
+              это «Цифровой клон» вашего продавца, работающего по инструкции:
+            </p>
+          </div>
+          
+          <div className="space-y-6 sm:space-y-8 max-w-4xl mx-auto">
+            <div className="flex items-start gap-4 sm:gap-6">
+              <div className="flex-shrink-0 p-3 sm:p-4 bg-primary/20 rounded-lg">
+                <Icon name="MessageCircle" size={32} className="text-primary sm:w-10 sm:h-10" />
+              </div>
+              <div>
+                <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-primary mb-2 sm:mb-3">
+                  Живое общение
+                </h4>
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
+                  Он общается максимально близко к человеческому, понимает сленг и контекст, не беся клиентов.
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex items-start gap-4 sm:gap-6">
+              <div className="flex-shrink-0 p-3 sm:p-4 bg-primary/20 rounded-lg">
+                <Icon name="Brain" size={32} className="text-primary sm:w-10 sm:h-10" />
+              </div>
+              <div>
+                <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-primary mb-2 sm:mb-3">
+                  Полноценный диалог
+                </h4>
+                <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
+                  Он <span className="font-bold text-foreground">НЕ работает</span> из серии "Здравствуйте, оставьте номер телефона, с вами свяжутся и подробно проконсультируют", а ведет полноценный диалог по скрипту продаж, даже делает просчеты и проверяет наличие товара в базе данных, если необходимо
+                </p>
+              </div>
+            </div>
+          </div>
+        </Card>
       </div>
     </section>
   );
