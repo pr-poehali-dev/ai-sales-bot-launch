@@ -14,6 +14,7 @@ export default function Index() {
     <div className="min-h-screen bg-background cyber-grid">
       <HeroSection />
       <ProblemSection />
+      <NichesSection />
       <BenefitsSection />
       <ComparisonSection />
       <HybridSection />
@@ -150,6 +151,89 @@ function ProblemSection() {
                 </p>
               </div>
             </div>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function NichesSection() {
+  const niches = [
+    {
+      niche: "Застройщики",
+      action: "Отвечает по ценам, планировкам и ипотеке",
+      result: "Запись на показ объекта",
+      icon: "Building2"
+    },
+    {
+      niche: "Автосалоны",
+      action: "Считает Трейд-ин, подбирает комплектацию",
+      result: "Запись на тест-драйв",
+      icon: "Car"
+    },
+    {
+      niche: "Фитнес-центры",
+      action: "Рассказывает про залы, цены и тренеров",
+      result: "Запись на пробную тренировку",
+      icon: "Dumbbell"
+    },
+    {
+      niche: "Интернет-магазины",
+      action: "Помогает выбрать товар и размер",
+      result: "Оформленный заказ",
+      icon: "ShoppingCart"
+    },
+    {
+      niche: "Услуги (Клиники/Бьюти)",
+      action: "Консультирует по услугам и окнам в графике",
+      result: "Бронирование времени (запись)",
+      icon: "Calendar"
+    }
+  ];
+
+  return (
+    <section className="py-32 px-4 sm:px-6 bg-gradient-to-b from-transparent to-secondary/10">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 gradient-text leading-tight">
+            В каких нишах бот окупается очень быстро?
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto">
+            Бот не просто «болтает» — он ведет клиента за руку к целевому действию, пока тот не передумал.
+          </p>
+        </div>
+
+        <div className="space-y-4 md:space-y-6">
+          {niches.map((item, i) => (
+            <Card key={i} className="p-4 sm:p-6 md:p-8 bg-card/50 backdrop-blur border-2 border-primary/30 hover:border-primary transition-all">
+              <div className="grid md:grid-cols-3 gap-4 md:gap-6 items-center">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="p-2 sm:p-3 bg-primary/20 rounded-lg flex-shrink-0">
+                    <Icon name={item.icon as any} size={32} className="text-primary" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold">{item.niche}</h3>
+                </div>
+                
+                <div>
+                  <p className="text-xs sm:text-sm text-muted-foreground mb-1">Что делает ИИ</p>
+                  <p className="text-sm sm:text-base md:text-lg">{item.action}</p>
+                </div>
+                
+                <div className="md:text-right">
+                  <p className="text-xs sm:text-sm text-muted-foreground mb-1">Результат (Цель)</p>
+                  <p className="text-sm sm:text-base md:text-lg font-bold text-primary">{item.result}</p>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+
+        <div className="mt-12 md:mt-16 text-center">
+          <Card className="inline-block p-6 sm:p-8 bg-gradient-to-r from-primary/20 to-secondary/20 border-2 border-primary neon-border">
+            <p className="text-lg sm:text-xl md:text-2xl font-black">
+              <span className="text-primary neon-glow">Каждый бот</span> настроен под вашу нишу и цели
+            </p>
           </Card>
         </div>
       </div>
