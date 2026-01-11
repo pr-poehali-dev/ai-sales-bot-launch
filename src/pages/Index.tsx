@@ -632,9 +632,22 @@ function TestDriveSection() {
           <p className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6">
             Цена: <span className="text-primary text-3xl sm:text-4xl md:text-5xl">5 000 сом</span>
           </p>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8">
             Если результат не устроит — мы не продолжаем
           </p>
+          <a 
+            href="https://wa.me/996500113974?text=Здравствуйте%2C%20хотел(а)%20бы%20узнать%20подробнее%20про%20работу%20чат-бота"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button 
+              size="lg" 
+              className="text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 neon-border bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold w-full sm:w-auto"
+            >
+              <Icon name="MessageCircle" className="mr-2 sm:mr-3" size={20} />
+              Хочу обсудить детали
+            </Button>
+          </a>
         </Card>
       </div>
     </section>
