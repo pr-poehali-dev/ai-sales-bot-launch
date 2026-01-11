@@ -43,7 +43,7 @@ function HeroSection() {
       </div>
       
       <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="text-center space-y-8 animate-fade-in">
+        <div className="text-left sm:text-center space-y-8 animate-fade-in">
           <Badge variant="outline" className="neon-border px-3 py-1.5 text-xs sm:text-sm md:text-base lg:text-lg">
             Для владельцев бизнеса в Бишкеке (трафик от 50 заявок/день)
           </Badge>
@@ -85,7 +85,7 @@ function ProblemSection() {
   return (
     <section className="py-32 px-4 sm:px-6 relative">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
+        <div className="text-left sm:text-center mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 gradient-text leading-tight">
             Почему 50 заявок в день это слив рекламного бюджета
           </h2>
@@ -195,7 +195,7 @@ function NichesSection() {
   return (
     <section className="py-32 px-4 sm:px-6 bg-gradient-to-b from-transparent to-secondary/10">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-left sm:text-center mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 gradient-text leading-tight">
             В каких нишах бот окупается очень быстро?
           </h2>
@@ -229,7 +229,7 @@ function NichesSection() {
           ))}
         </div>
 
-        <div className="mt-12 md:mt-16 text-center">
+        <div className="mt-12 md:mt-16 text-left sm:text-center">
           <Card className="inline-block p-6 sm:p-8 bg-gradient-to-r from-primary/20 to-secondary/20 border-2 border-primary neon-border">
             <p className="text-lg sm:text-xl md:text-2xl font-black">
               <span className="text-primary neon-glow">Каждый бот</span> настроен под вашу нишу и цели
@@ -325,7 +325,7 @@ function ComparisonSection() {
         
         <div className="mb-12 md:mb-16">
           <Card className="p-6 sm:p-8 md:p-10 bg-card/50 border-2 border-destructive/50">
-            <p className="text-base sm:text-lg md:text-xl text-center mb-6 md:mb-8 font-semibold">
+            <p className="text-base sm:text-lg md:text-xl text-left sm:text-center mb-6 md:mb-8 font-semibold">
               На рынке полно предложений сделать бота за копейки. Но вы получите «робота», который:
             </p>
             
@@ -516,7 +516,7 @@ function ExpertiseSection() {
   return (
     <section className="py-32 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12">
+        <div className="text-left sm:text-center mb-12">
           <Badge variant="outline" className="neon-border px-4 py-1.5 text-sm sm:text-base lg:text-lg mb-6">
             Экспертность
           </Badge>
@@ -564,7 +564,7 @@ function TestDriveSection() {
   return (
     <section className="py-32 px-6 bg-gradient-to-b from-primary/5 to-transparent">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-left sm:text-center mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 leading-tight">
             Посмотрите на своего <span className="gradient-text">«Цифрового двойника»</span> <br className="hidden sm:block" />в деле до основной оплаты
           </h2>
