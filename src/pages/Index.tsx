@@ -47,19 +47,9 @@ function HeroSection() {
             Для владельцев бизнеса в Бишкеке (трафик от 50 заявок/день)
           </Badge>
           
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight">
-            Перестаньте платить менеджерам за{" "}
-            <span className="gradient-text">«работу автоответчиком»</span>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight">
+            Хватит выбрасывать деньги на рекламу впустую. Ваши менеджеры сливают до <span className="gradient-text">40% бюджета</span>, потому что долго отвечают, забывают перезвонить или просто теряют заявки в куче чатов. Внедрите ИИ-систему, которая подхватывает каждого клиента за 12 секунд.
           </h1>
-          
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto">
-            Платите за <span className="text-primary font-bold">ПРОДАЖИ</span>
-          </p>
-          
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/80 max-w-3xl mx-auto">
-            Внедрите ИИ-ассистента для первичной обработки 100% обращений. 
-            Ваша команда работает только с «горячими» клиентами.
-          </p>
           
           <div className="pt-8">
             <a href="#problem">
