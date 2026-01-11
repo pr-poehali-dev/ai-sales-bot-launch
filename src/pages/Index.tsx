@@ -102,6 +102,25 @@ function ProblemSection() {
           </div>
         </div>
         
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
+          <Card className="p-4 sm:p-6 bg-destructive/10 border-2 border-destructive/50 text-center">
+            <div className="text-3xl sm:text-4xl md:text-5xl font-black text-destructive mb-2">80%</div>
+            <p className="text-xs sm:text-sm md:text-base text-muted-foreground">времени на рутину</p>
+          </Card>
+          <Card className="p-4 sm:p-6 bg-destructive/10 border-2 border-destructive/50 text-center">
+            <div className="text-3xl sm:text-4xl md:text-5xl font-black text-destructive mb-2">40%</div>
+            <p className="text-xs sm:text-sm md:text-base text-muted-foreground">потерянных заявок</p>
+          </Card>
+          <Card className="p-4 sm:p-6 bg-destructive/10 border-2 border-destructive/50 text-center">
+            <div className="text-3xl sm:text-4xl md:text-5xl font-black text-destructive mb-2">15 мин</div>
+            <p className="text-xs sm:text-sm md:text-base text-muted-foreground">среднее время ответа</p>
+          </Card>
+          <Card className="p-4 sm:p-6 bg-destructive/10 border-2 border-destructive/50 text-center">
+            <div className="text-3xl sm:text-4xl md:text-5xl font-black text-destructive mb-2">60%</div>
+            <p className="text-xs sm:text-sm md:text-base text-muted-foreground">выгорание за год</p>
+          </Card>
+        </div>
+        
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           <Card className="p-4 sm:p-6 md:p-8 bg-card/50 backdrop-blur border-2 border-destructive/50 hover:border-destructive transition-all">
             <div className="flex items-start gap-3 sm:gap-4">
