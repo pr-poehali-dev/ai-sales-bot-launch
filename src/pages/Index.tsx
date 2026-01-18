@@ -25,7 +25,10 @@ export default function Index() {
       <TestimonialsSection />
       <FAQSection />
       <FinalCTASection />
-      <WhatsAppWidget phoneNumber="+996555123456" />
+      <WhatsAppWidget 
+        phoneNumber="+996500113974" 
+        message="Здравствуйте, хотел(а) бы узнать подробнее о чат-боте." 
+      />
     </div>
   );
 }
