@@ -389,7 +389,7 @@ function ComparisonSection() {
         <Card className="p-6 sm:p-8 md:p-10 lg:p-12 bg-gradient-to-br from-primary/10 to-secondary/10 border-2 border-primary neon-border">
           <div className="text-center mb-8 md:mb-10">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-black mb-4">
-              Моя система за <span className="text-primary neon-glow">85 000 сом</span>
+              <span className="text-primary neon-glow">Моя система</span>
             </h3>
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground">
               это «Цифровой клон» вашего продавца, работающего по инструкции:
