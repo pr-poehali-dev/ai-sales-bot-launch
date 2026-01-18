@@ -101,6 +101,20 @@
       linear-gradient(90deg, hsl(var(--neon-cyan) / 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
   }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 3s infinite;
+  }
+
+  @keyframes bounce-slow {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
 }
 
 @layer base {

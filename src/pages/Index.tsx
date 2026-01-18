@@ -9,6 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 export default function Index() {
   return (
@@ -24,6 +25,7 @@ export default function Index() {
       <TestimonialsSection />
       <FAQSection />
       <FinalCTASection />
+      <WhatsAppWidget phoneNumber="+996555123456" />
     </div>
   );
 }
