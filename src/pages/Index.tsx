@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -38,6 +39,7 @@ function HeroSection() {
           className="w-full h-full object-cover"
           loading="lazy"
           decoding="async"
+          fetchpriority="low"
         />
       </div>
       
