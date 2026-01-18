@@ -566,7 +566,7 @@ function ExpertiseSection() {
             <div className="space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg leading-relaxed">
               <div>
                 <span className="font-bold text-primary text-base sm:text-lg md:text-xl">Автор:</span>
-                <span className="text-base sm:text-lg md:text-xl"> Петр, экс-руководитель «ЭСТО Консалтинг» и «Alexandra»</span>
+                <span className="text-base sm:text-lg md:text-xl"> Петр, экс-руководитель «ЭСТО Консалтинг» и действующий управляющий швейной компании «Alexandra»</span>
               </div>
               
               <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
