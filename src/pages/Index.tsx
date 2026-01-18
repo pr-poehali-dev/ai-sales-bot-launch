@@ -329,7 +329,7 @@ function ComparisonSection() {
     <section className="py-32 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-center mb-6 md:mb-8 px-4 leading-tight">
-          Наша цена составляет — <span className="gradient-text">85 000 сом</span>
+          Наша цена — <span className="gradient-text">От 60 тыс сом</span> в зависимости от сложности и функционала
         </h2>
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-center text-muted-foreground mb-12 md:mb-16 px-4 max-w-4xl mx-auto">
           В городе вы можете сделать бота и за 30 000 сом, но почему у нас дороже?
