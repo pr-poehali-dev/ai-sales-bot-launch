@@ -783,13 +783,19 @@ function FinalCTASection() {
           Чтобы гарантировать качество внедрения, я ограничиваю количество заказов.
         </p>
         
-        <Button 
-          size="lg" 
-          className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl px-6 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6 md:py-8 lg:py-10 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-black w-full sm:w-auto"
+        <a 
+          href="https://wa.me/996500113974?text=Здравствуйте%2C%20хотел(а)%20бы%20заказать%20тест-драйв%20за%205000%20сом"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <Icon name="Rocket" className="mr-2 sm:mr-3 md:mr-4" size={24} />
-          <span className="leading-tight">ЗАБРОНИРОВАТЬ ТЕСТ-ДРАЙВ<br className="sm:hidden" /> ЗА 5000 СОМ</span>
-        </Button>
+          <Button 
+            size="lg" 
+            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl px-6 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6 md:py-8 lg:py-10 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-black w-full sm:w-auto"
+          >
+            <Icon name="Rocket" className="mr-2 sm:mr-3 md:mr-4" size={24} />
+            <span className="leading-tight">ЗАБРОНИРОВАТЬ ТЕСТ-ДРАЙВ<br className="sm:hidden" /> ЗА 5000 СОМ</span>
+          </Button>
+        </a>
         
         <div className="mt-12 sm:mt-16 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 md:gap-8 text-sm sm:text-base text-muted-foreground px-4">
           <div className="flex items-center justify-center gap-2">
