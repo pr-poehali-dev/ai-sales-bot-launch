@@ -72,10 +72,10 @@ function HeroSection() {
             <a href="#problem">
               <Button 
                 size="lg" 
-                className="text-xs sm:text-base md:text-lg lg:text-xl px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-5 md:py-6 lg:py-8 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-bold w-full sm:w-auto"
+                className="text-[11px] xs:text-xs sm:text-base md:text-lg lg:text-xl px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12 py-3 xs:py-4 sm:py-5 md:py-6 lg:py-8 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-bold w-full sm:w-auto"
               >
-                <Icon name="Sparkles" className="mr-1 sm:mr-3" size={18} />
-                <span className="leading-tight">Узнать подробнее</span>
+                <Icon name="Sparkles" className="mr-1 sm:mr-3" size={16} />
+                <span className="leading-tight whitespace-normal">Узнать подробнее</span>
               </Button>
             </a>
           </div>
@@ -649,10 +649,10 @@ function TestDriveSection() {
           >
             <Button 
               size="lg" 
-              className="text-xs sm:text-base md:text-lg px-4 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 neon-border bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold w-full sm:w-auto"
+              className="text-[11px] xs:text-xs sm:text-base md:text-lg px-3 xs:px-4 sm:px-8 md:px-10 py-3 xs:py-4 sm:py-5 md:py-6 neon-border bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold w-full sm:w-auto"
             >
-              <Icon name="MessageCircle" className="mr-1 sm:mr-3" size={18} />
-              Хочу обсудить детали
+              <Icon name="MessageCircle" className="mr-1 sm:mr-3" size={16} />
+              <span className="whitespace-normal">Хочу обсудить детали</span>
             </Button>
           </a>
         </Card>
@@ -790,10 +790,10 @@ function FinalCTASection() {
         >
           <Button 
             size="lg" 
-            className="text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6 md:py-8 lg:py-10 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-black w-full sm:w-auto"
+            className="text-[10px] xs:text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl px-3 xs:px-4 sm:px-8 md:px-12 lg:px-16 py-3 xs:py-4 sm:py-6 md:py-8 lg:py-10 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-black w-full sm:w-auto"
           >
-            <Icon name="Rocket" className="mr-1 sm:mr-3 md:mr-4" size={20} />
-            <span className="leading-tight">ЗАБРОНИРОВАТЬ ТЕСТ-ДРАЙВ ЗА 5000 СОМ</span>
+            <Icon name="Rocket" className="mr-1 sm:mr-3 md:mr-4" size={16} />
+            <span className="leading-tight whitespace-normal">ЗАБРОНИРОВАТЬ ТЕСТ-ДРАЙВ ЗА 5000 СОМ</span>
           </Button>
         </a>
         
