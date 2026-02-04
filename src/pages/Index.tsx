@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -10,8 +10,11 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
+import RegistrationForm from "@/components/RegistrationForm";
 
 export default function Index() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background cyber-grid">
       <HeroSection />
@@ -69,15 +72,14 @@ function HeroSection() {
           </div>
           
           <div className="pt-4 sm:pt-8">
-            <a href="#problem">
-              <Button 
-                size="lg" 
-                className="text-[11px] xs:text-xs sm:text-base md:text-lg lg:text-xl px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12 py-3 xs:py-4 sm:py-5 md:py-6 lg:py-8 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-bold w-full sm:w-auto"
-              >
-                <Icon name="Sparkles" className="mr-1 sm:mr-3" size={16} />
-                <span className="leading-tight whitespace-normal">Узнать подробнее</span>
-              </Button>
-            </a>
+            <Button 
+              size="lg" 
+              onClick={() => setIsFormOpen(true)}
+              className="text-[11px] xs:text-xs sm:text-base md:text-lg lg:text-xl px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12 py-3 xs:py-4 sm:py-5 md:py-6 lg:py-8 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-bold w-full sm:w-auto cursor-pointer"
+            >
+              <Icon name="Sparkles" className="mr-1 sm:mr-3" size={16} />
+              <span className="leading-tight whitespace-normal">Узнать подробнее</span>
+            </Button>
           </div>
         </div>
       </div>
@@ -642,19 +644,14 @@ function TestDriveSection() {
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8">
             Если результат не устроит — мы не продолжаем
           </p>
-          <a 
-            href="https://wa.me/996500113974?text=Здравствуйте%2C%20хотел(а)%20бы%20узнать%20подробнее%20про%20работу%20чат-бота"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Button 
+            size="lg" 
+            onClick={() => setIsFormOpen(true)}
+            className="text-[11px] xs:text-xs sm:text-base md:text-lg px-3 xs:px-4 sm:px-8 md:px-10 py-3 xs:py-4 sm:py-5 md:py-6 neon-border bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold w-full sm:w-auto cursor-pointer"
           >
-            <Button 
-              size="lg" 
-              className="text-[11px] xs:text-xs sm:text-base md:text-lg px-3 xs:px-4 sm:px-8 md:px-10 py-3 xs:py-4 sm:py-5 md:py-6 neon-border bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold w-full sm:w-auto"
-            >
-              <Icon name="MessageCircle" className="mr-1 sm:mr-3" size={16} />
-              <span className="whitespace-normal">Хочу обсудить детали</span>
-            </Button>
-          </a>
+            <Icon name="MessageCircle" className="mr-1 sm:mr-3" size={16} />
+            <span className="whitespace-normal">Хочу обсудить детали</span>
+          </Button>
         </Card>
       </div>
     </section>
@@ -783,19 +780,14 @@ function FinalCTASection() {
           Чтобы гарантировать качество внедрения, я ограничиваю количество заказов.
         </p>
         
-        <a 
-          href="https://wa.me/996500113974?text=Здравствуйте%2C%20хотел(а)%20бы%20заказать%20тест-драйв%20чат-бота%20за%205000%20сом"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Button 
+          size="lg" 
+          onClick={() => setIsFormOpen(true)}
+          className="text-[10px] xs:text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl px-3 xs:px-4 sm:px-8 md:px-12 lg:px-16 py-3 xs:py-4 sm:py-6 md:py-8 lg:py-10 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-black w-full sm:w-auto cursor-pointer"
         >
-          <Button 
-            size="lg" 
-            className="text-[10px] xs:text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl px-3 xs:px-4 sm:px-8 md:px-12 lg:px-16 py-3 xs:py-4 sm:py-6 md:py-8 lg:py-10 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-black w-full sm:w-auto"
-          >
-            <Icon name="Rocket" className="mr-1 sm:mr-3 md:mr-4" size={16} />
-            <span className="leading-tight whitespace-normal">ЗАБРОНИРОВАТЬ ТЕСТ-ДРАЙВ ЗА 5000 СОМ</span>
-          </Button>
-        </a>
+          <Icon name="Rocket" className="mr-1 sm:mr-3 md:mr-4" size={16} />
+          <span className="leading-tight whitespace-normal">ЗАБРОНИРОВАТЬ ТЕСТ-ДРАЙВ ЗА 5000 СОМ</span>
+        </Button>
         
         <div className="mt-12 sm:mt-16 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 md:gap-8 text-sm sm:text-base text-muted-foreground px-4">
           <div className="flex items-center justify-center gap-2">
@@ -808,6 +800,8 @@ function FinalCTASection() {
           </div>
         </div>
       </div>
+      
+      <RegistrationForm open={isFormOpen} onOpenChange={setIsFormOpen} />
     </section>
   );
 }
