@@ -24,21 +24,42 @@ export default function RegistrationForm({ open, onOpenChange }: RegistrationFor
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Формируем сообщение для WhatsApp
-    const message = `Новая заявка:%0A%0AИмя: ${formData.name}%0AВид бизнеса: ${formData.businessType}%0AЗаявок в месяц: ${formData.leadsPerMonth}%0AWhatsApp: ${formData.whatsapp}`;
-    
-    // Открываем WhatsApp с сообщением
-    window.open(`https://wa.me/996500600150?text=${message}`, '_blank');
-    
-    setIsSubmitting(false);
-    setIsSuccess(true);
-    
-    // Закрываем форму через 2 секунды
-    setTimeout(() => {
-      setIsSuccess(false);
-      onOpenChange(false);
-      setFormData({ name: '', businessType: '', leadsPerMonth: '', whatsapp: '' });
-    }, 2000);
+    try {
+      // Сохраняем заявку в базу данных
+      const response = await fetch('https://functions.poehali.dev/fe97f339-3d51-43f5-8611-2ac45f11a611', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          businessType: formData.businessType,
+          monthlyLeads: parseInt(formData.leadsPerMonth) || 0,
+          whatsapp: formData.whatsapp
+        })
+      });
+
+      if (response.ok) {
+        // Формируем сообщение для WhatsApp
+        const message = `Новая заявка:%0A%0AИмя: ${formData.name}%0AВид бизнеса: ${formData.businessType}%0AЗаявок в месяц: ${formData.leadsPerMonth}%0AWhatsApp: ${formData.whatsapp}`;
+        
+        // Открываем WhatsApp с сообщением
+        window.open(`https://wa.me/996500600150?text=${message}`, '_blank');
+        
+        setIsSuccess(true);
+        
+        // Закрываем форму через 2 секунды
+        setTimeout(() => {
+          setIsSuccess(false);
+          onOpenChange(false);
+          setFormData({ name: '', businessType: '', leadsPerMonth: '', whatsapp: '' });
+        }, 2000);
+      }
+    } catch (error) {
+      console.error('Ошибка при отправке заявки:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (field: string, value: string) => {
