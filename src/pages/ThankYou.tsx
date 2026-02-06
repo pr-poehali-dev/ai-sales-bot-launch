@@ -4,7 +4,7 @@ import Icon from "@/components/ui/icon";
 
 export default function ThankYou() {
   const handleTestBot = () => {
-    window.open('https://wa.me/996500600150?text=Привет!%20Хочу%20протестировать%20виртуального%20ассистента', '_blank');
+    window.open('https://api.whatsapp.com/send/?phone=996500113974&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C+%D1%85%D0%BE%D1%82%D0%B5%D0%BB%28%D0%B0%29+%D0%B1%D1%8B+%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C+%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5+%D0%BE+%D1%87%D0%B0%D1%82-%D0%B1%D0%BE%D1%82%D0%B5.&type=phone_number&app_absent=0', '_blank');
   };
 
   return (
