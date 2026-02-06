@@ -19,10 +19,6 @@ export default function ThankYou() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 gradient-text leading-tight">
               Спасибо за заявку!
             </h1>
-            
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-              Мы свяжемся с вами в течение 30 минут в рабочее время (09:00 - 21:00)
-            </p>
           </div>
 
           <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-6 sm:p-8 md:p-10 border-2 border-primary/30 mb-8">
