@@ -17,26 +17,27 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background cyber-grid">
-      <HeroSection />
+      <HeroSection setIsFormOpen={setIsFormOpen} />
       <ProblemSection />
       <NichesSection />
       <BenefitsSection />
       <ComparisonSection />
       <HybridSection />
       <ExpertiseSection />
-      <TestDriveSection />
+      <TestDriveSection setIsFormOpen={setIsFormOpen} />
       <TestimonialsSection />
       <FAQSection />
-      <FinalCTASection />
+      <FinalCTASection setIsFormOpen={setIsFormOpen} />
       <WhatsAppWidget 
         phoneNumber="+996500113974" 
         message="Здравствуйте, хотел(а) бы узнать подробнее о чат-боте." 
       />
+      <RegistrationForm open={isFormOpen} onOpenChange={setIsFormOpen} />
     </div>
   );
 }
 
-function HeroSection() {
+function HeroSection({ setIsFormOpen }: { setIsFormOpen: (open: boolean) => void }) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 py-20">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-secondary/10" />
@@ -593,7 +594,7 @@ function ExpertiseSection() {
   );
 }
 
-function TestDriveSection() {
+function TestDriveSection({ setIsFormOpen }: { setIsFormOpen: (open: boolean) => void }) {
   return (
     <section id="test-drive" className="py-32 px-6 bg-gradient-to-b from-primary/5 to-transparent">
       <div className="container mx-auto max-w-6xl">
@@ -764,7 +765,7 @@ function FAQSection() {
   );
 }
 
-function FinalCTASection() {
+function FinalCTASection({ setIsFormOpen }: { setIsFormOpen: (open: boolean) => void }) {
   return (
     <section className="py-32 px-6 bg-gradient-to-b from-secondary/10 to-transparent">
       <div className="container mx-auto max-w-4xl text-center">
