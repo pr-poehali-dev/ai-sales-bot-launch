@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -11,14 +12,14 @@ interface RegistrationFormProps {
 }
 
 export default function RegistrationForm({ open, onOpenChange }: RegistrationFormProps) {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     businessType: '',
-    leadsPerMonth: '',
+    leadsPerWeek: '',
     whatsapp: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,26 +35,22 @@ export default function RegistrationForm({ open, onOpenChange }: RegistrationFor
         body: JSON.stringify({
           name: formData.name,
           businessType: formData.businessType,
-          monthlyLeads: parseInt(formData.leadsPerMonth) || 0,
+          monthlyLeads: parseInt(formData.leadsPerWeek) || 0,
           whatsapp: formData.whatsapp
         })
       });
 
       if (response.ok) {
         // Формируем сообщение для WhatsApp
-        const message = `Новая заявка:%0A%0AИмя: ${formData.name}%0AВид бизнеса: ${formData.businessType}%0AЗаявок в месяц: ${formData.leadsPerMonth}%0AWhatsApp: ${formData.whatsapp}`;
+        const message = `Новая заявка:%0A%0AИмя: ${formData.name}%0AВид бизнеса: ${formData.businessType}%0AЗаявок в неделю: ${formData.leadsPerWeek}%0AWhatsApp: ${formData.whatsapp}`;
         
         // Открываем WhatsApp с сообщением
         window.open(`https://wa.me/996500600150?text=${message}`, '_blank');
         
-        setIsSuccess(true);
-        
-        // Закрываем форму через 2 секунды
-        setTimeout(() => {
-          setIsSuccess(false);
-          onOpenChange(false);
-          setFormData({ name: '', businessType: '', leadsPerMonth: '', whatsapp: '' });
-        }, 2000);
+        // Перенаправляем на страницу благодарности
+        onOpenChange(false);
+        setFormData({ name: '', businessType: '', leadsPerWeek: '', whatsapp: '' });
+        navigate('/thank-you');
       }
     } catch (error) {
       console.error('Ошибка при отправке заявки:', error);
@@ -79,14 +76,7 @@ export default function RegistrationForm({ open, onOpenChange }: RegistrationFor
           </DialogDescription>
         </DialogHeader>
 
-        {isSuccess ? (
-          <div className="py-8 text-center">
-            <Icon name="CheckCircle" size={64} className="mx-auto text-green-500 mb-4" />
-            <p className="text-xl font-bold text-green-500">Заявка отправлена!</p>
-            <p className="text-muted-foreground mt-2">Мы свяжемся с вами в ближайшее время</p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-6 py-4">
+        <form onSubmit={handleSubmit} className="space-y-6 py-4">
             <div className="space-y-2">
               <Label htmlFor="name" className="text-base font-semibold">
                 Имя
@@ -118,15 +108,15 @@ export default function RegistrationForm({ open, onOpenChange }: RegistrationFor
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="leadsPerMonth" className="text-base font-semibold">
-                Сколько заявок в месяц
+              <Label htmlFor="leadsPerWeek" className="text-base font-semibold">
+                Сколько заявок в неделю
               </Label>
               <Input
-                id="leadsPerMonth"
+                id="leadsPerWeek"
                 type="text"
-                placeholder="Например: 50-100"
-                value={formData.leadsPerMonth}
-                onChange={(e) => handleChange('leadsPerMonth', e.target.value)}
+                placeholder="Например: 10-25"
+                value={formData.leadsPerWeek}
+                onChange={(e) => handleChange('leadsPerWeek', e.target.value)}
                 required
                 className="h-12 text-base border-2 focus:border-primary"
               />
@@ -165,7 +155,6 @@ export default function RegistrationForm({ open, onOpenChange }: RegistrationFor
               )}
             </Button>
           </form>
-        )}
       </DialogContent>
     </Dialog>
   );
