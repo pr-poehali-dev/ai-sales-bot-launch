@@ -99,6 +99,9 @@ export function ExpertiseSection() {
                     <span>Занимаюсь отделами продаж</span>
                   </li>
                 </ul>
+                <p className="text-muted-foreground mt-4 text-sm sm:text-base">
+                  Является экс-владельцем "ЭСТО Консалтинг" и действующим управляющим партнером швейной компании "Alexandra"
+                </p>
               </div>
               
               <div className="p-4 sm:p-6 bg-primary/10 rounded-lg border-2 border-primary/30">
