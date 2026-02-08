@@ -11,9 +11,9 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background cyber-grid">
-      <HeroSection setIsFormOpen={setIsFormOpen} />
+      <HeroSection />
       <ProblemSection />
-      <NichesSection />
+      <NichesSection setIsFormOpen={setIsFormOpen} />
       <BenefitsSection />
       <ComparisonSection />
       <HybridSection />

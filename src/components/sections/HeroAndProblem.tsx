@@ -3,11 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
 
-interface HeroSectionProps {
-  setIsFormOpen: (open: boolean) => void;
-}
-
-export function HeroSection({ setIsFormOpen }: HeroSectionProps) {
+export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 py-20">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-secondary/10" />
@@ -45,7 +41,10 @@ export function HeroSection({ setIsFormOpen }: HeroSectionProps) {
           <div className="pt-4 sm:pt-8">
             <Button 
               size="lg" 
-              onClick={() => setIsFormOpen(true)}
+              onClick={() => {
+                const problemSection = document.getElementById('problem');
+                problemSection?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="text-[11px] xs:text-xs sm:text-base md:text-lg lg:text-xl px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12 py-3 xs:py-4 sm:py-5 md:py-6 lg:py-8 neon-border animate-glow-pulse bg-primary hover:bg-primary/90 text-primary-foreground font-bold w-full sm:w-auto cursor-pointer"
             >
               <Icon name="Sparkles" className="mr-1 sm:mr-3" size={16} />
@@ -68,7 +67,7 @@ export function ProblemSection() {
       <div className="container mx-auto max-w-6xl">
         <div className="text-left sm:text-center mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 leading-tight">
-            💸 Вы сливаете рекламный бюджет — <span className="gradient-text">даже не замечая этого</span>
+            Ваши сотрудники <span className="gradient-text">теряют клиентов</span>, даже не замечая этого
           </h2>
         </div>
         
@@ -160,7 +159,11 @@ export function ProblemSection() {
   );
 }
 
-export function NichesSection() {
+interface NichesSectionProps {
+  setIsFormOpen: (open: boolean) => void;
+}
+
+export function NichesSection({ setIsFormOpen }: NichesSectionProps) {
   const niches = [
     {
       niche: "Застройщики",
@@ -228,6 +231,17 @@ export function NichesSection() {
               </div>
             </Card>
           ))}
+        </div>
+        
+        <div className="flex justify-center mt-12">
+          <Button 
+            size="lg" 
+            onClick={() => setIsFormOpen(true)}
+            className="text-base sm:text-lg md:text-xl px-8 sm:px-12 py-6 sm:py-8 neon-border bg-primary hover:bg-primary/90 text-primary-foreground font-bold"
+          >
+            <Icon name="Sparkles" className="mr-2" size={20} />
+            Мне интересно
+          </Button>
         </div>
       </div>
     </section>
