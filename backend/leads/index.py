@@ -68,6 +68,12 @@ def handler(event: dict, context) -> dict:
                 print(f"DEBUG: bot_token present: {bool(bot_token)}, chat_id present: {bool(chat_id)}")
                 
                 if bot_token and chat_id:
+                    # Конвертируем chat_id в int для корректной работы с API
+                    try:
+                        chat_id_int = int(chat_id)
+                    except ValueError:
+                        chat_id_int = chat_id
+                    
                     message = f"🔔 Новая заявка #{lead_id}\n\n" \
                               f"👤 Имя: {name}\n" \
                               f"🏢 Бизнес: {business_type}\n" \
@@ -75,12 +81,11 @@ def handler(event: dict, context) -> dict:
                               f"📱 WhatsApp: {whatsapp}"
                     
                     telegram_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
-                    print(f"DEBUG: Sending to Telegram, chat_id: {chat_id}")
+                    print(f"DEBUG: Sending to Telegram, chat_id: {chat_id_int} (type: {type(chat_id_int)})")
                     
                     response = requests.post(telegram_url, json={
-                        'chat_id': chat_id,
-                        'text': message,
-                        'parse_mode': 'HTML'
+                        'chat_id': chat_id_int,
+                        'text': message
                     }, timeout=5)
                     
                     print(f"DEBUG: Telegram response status: {response.status_code}")
