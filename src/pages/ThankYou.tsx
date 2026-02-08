@@ -8,9 +8,9 @@ export default function ThankYou() {
   };
 
   return (
-    <div className="min-h-screen bg-background cyber-grid flex items-center justify-center px-4 py-12">
-      <div className="container mx-auto max-w-4xl">
-        <Card className="p-8 sm:p-12 md:p-16 bg-gradient-to-br from-card via-card to-primary/5 border-2 border-primary/50 neon-border text-center">
+    <div className="min-h-screen bg-background cyber-grid flex items-center justify-center px-4 sm:px-6 py-12">
+      <div className="container mx-auto max-w-5xl">
+        <Card className="p-6 sm:p-8 md:p-12 lg:p-16 bg-gradient-to-br from-card via-card to-primary/5 border-2 border-primary/50 neon-border text-center">
           <div className="mb-8">
             <div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-primary/20 rounded-full mb-6 animate-pulse">
               <Icon name="CheckCircle" size={48} className="text-primary sm:w-16 sm:h-16" />
@@ -57,10 +57,10 @@ export default function ThankYou() {
             <Button 
               onClick={handleTestBot}
               size="lg" 
-              className="text-base sm:text-lg md:text-xl px-8 sm:px-12 py-6 sm:py-8 neon-border animate-glow-pulse bg-[#25D366] hover:bg-[#20BA5A] text-white font-black w-full sm:w-auto"
+              className="text-sm sm:text-base md:text-lg lg:text-xl px-4 sm:px-8 md:px-12 py-5 sm:py-6 md:py-8 neon-border animate-glow-pulse bg-[#25D366] hover:bg-[#20BA5A] text-white font-black w-full sm:w-auto"
             >
-              <Icon name="MessageCircle" className="mr-3" size={24} />
-              Протестировать ассистента в WhatsApp
+              <Icon name="MessageCircle" className="mr-2 sm:mr-3" size={20} />
+              <span className="leading-tight">Протестировать ассистента</span>
             </Button>
           </div>
 
