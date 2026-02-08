@@ -74,22 +74,23 @@ def handler(event: dict, context) -> dict:
                     except ValueError:
                         chat_id_int = chat_id
                     
-                    message = f"🔔 Новая заявка #{lead_id}\n\n" \
-                              f"👤 Имя: {name}\n" \
-                              f"🏢 Бизнес: {business_type}\n" \
-                              f"📊 Заявок/неделю: {monthly_leads}\n" \
-                              f"📱 WhatsApp: {whatsapp}"
+                    message = f"Новая заявка #{lead_id}\n\nИмя: {name}\nБизнес: {business_type}\nЗаявок/неделю: {monthly_leads}\nWhatsApp: {whatsapp}"
                     
                     telegram_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
                     print(f"DEBUG: Sending to Telegram, chat_id: {chat_id_int} (type: {type(chat_id_int)})")
                     
-                    # Используем GET-запрос вместо POST для надежности
-                    import urllib.parse
-                    encoded_message = urllib.parse.quote(message)
-                    response = requests.get(
-                        f"{telegram_url}?chat_id={chat_id_int}&text={encoded_message}",
+                    # Простой POST с параметрами (не JSON)
+                    response = requests.post(
+                        telegram_url,
+                        data={
+                            'chat_id': chat_id_int,
+                            'text': message
+                        },
                         timeout=5
                     )
+                    
+                    print(f"DEBUG: Request URL: {telegram_url}")
+                    print(f"DEBUG: Request data: chat_id={chat_id_int}, text_length={len(message)}")
                     
                     print(f"DEBUG: Telegram response status: {response.status_code}")
                     print(f"DEBUG: Telegram response: {response.text}")
