@@ -66,70 +66,91 @@ export function ProblemSection() {
   return (
     <section id="problem" className="py-32 px-4 sm:px-6 relative">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-left sm:text-center mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 gradient-text leading-tight">
-            Как работает ваш отдел продаж, когда отвечает одновременно на 50 заявок в день
+        <div className="text-left sm:text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 leading-tight">
+            💸 Вы сливаете рекламный бюджет — <span className="gradient-text">даже не замечая этого</span>
           </h2>
         </div>
         
-        <div className="mb-12 flex justify-center">
-          <div className="relative max-w-md w-full rounded-2xl overflow-hidden border-4 border-destructive/50">
-            <img 
-              src="https://cdn.poehali.dev/projects/ba5fe4a4-8925-4895-b042-679829051f5f/files/74a3985c-0414-4ee7-8a48-08251955f25b.jpg" 
-              alt="Уставший менеджер за компьютером" 
-              className="w-full h-auto object-cover"
-              loading="lazy"
-              decoding="async"
-            />
+        <div className="max-w-4xl mx-auto space-y-8 mb-12">
+          <Card className="p-6 sm:p-8 bg-card/50 backdrop-blur border-2 border-primary/30">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Когда клиент оставляет заявку, у него есть интерес.
+            </p>
+          </Card>
+          
+          <div>
+            <p className="text-lg sm:text-xl md:text-2xl font-bold mb-6">Но дальше начинается реальность:</p>
+            <div className="grid gap-4">
+              <Card className="p-4 sm:p-6 bg-primary/10 border-2 border-primary/30">
+                <div className="flex items-center gap-3">
+                  <Icon name="CheckCircle" size={24} className="text-primary flex-shrink-0" />
+                  <p className="text-sm sm:text-base md:text-lg">
+                    <span className="font-bold">Ответ через 5 минут</span> → клиент еще горячий
+                  </p>
+                </div>
+              </Card>
+              <Card className="p-4 sm:p-6 bg-destructive/10 border-2 border-destructive/30">
+                <div className="flex items-center gap-3">
+                  <Icon name="AlertCircle" size={24} className="text-destructive flex-shrink-0" />
+                  <p className="text-sm sm:text-base md:text-lg">
+                    <span className="font-bold">Ответ через 30 минут</span> → интерес падает в 2–3 раза
+                  </p>
+                </div>
+              </Card>
+              <Card className="p-4 sm:p-6 bg-destructive/20 border-2 border-destructive/50">
+                <div className="flex items-center gap-3">
+                  <Icon name="XCircle" size={24} className="text-destructive flex-shrink-0" />
+                  <p className="text-sm sm:text-base md:text-lg">
+                    <span className="font-bold">Ответ через 2 часа и позже</span> → клиент уже ушёл к конкуренту
+                  </p>
+                </div>
+              </Card>
+            </div>
           </div>
-        </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
-          <Card className="p-4 sm:p-6 bg-destructive/10 border-2 border-destructive/50 text-center">
-            <div className="text-3xl sm:text-4xl md:text-5xl font-black text-destructive mb-2">80%</div>
-            <p className="text-xs sm:text-sm md:text-base text-muted-foreground">времени отвечают на одни и те же вопросы</p>
-          </Card>
-          <Card className="p-4 sm:p-6 bg-destructive/10 border-2 border-destructive/50 text-center">
-            <div className="text-3xl sm:text-4xl md:text-5xl font-black text-destructive mb-2">40%</div>
-            <p className="text-xs sm:text-sm md:text-base text-muted-foreground">потерянных заявок</p>
-          </Card>
-          <Card className="p-4 sm:p-6 bg-destructive/10 border-2 border-destructive/50 text-center">
-            <div className="text-3xl sm:text-4xl md:text-5xl font-black text-destructive mb-2">15 мин</div>
-            <p className="text-xs sm:text-sm md:text-base text-muted-foreground">среднее время ответа</p>
-          </Card>
-          <Card className="p-4 sm:p-6 bg-destructive/10 border-2 border-destructive/50 text-center">
-            <div className="text-3xl sm:text-4xl md:text-5xl font-black text-destructive mb-2">70%</div>
-            <p className="text-xs sm:text-sm md:text-base text-muted-foreground">текучка кадров за полгода</p>
-          </Card>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-          <Card className="p-4 sm:p-6 md:p-8 bg-card/50 backdrop-blur border-2 border-destructive/50 hover:border-destructive transition-all">
-            <div className="flex items-start gap-3 sm:gap-4">
-              <div className="p-2 sm:p-3 bg-destructive/20 rounded-lg flex-shrink-0">
-                <Icon name="AlertTriangle" size={24} className="text-destructive sm:w-8 sm:h-8" />
+          
+          <Card className="p-6 sm:p-8 bg-destructive/10 border-2 border-destructive/50">
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-destructive/20 rounded-lg flex-shrink-0">
+                <Icon name="TrendingDown" size={32} className="text-destructive" />
               </div>
               <div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4">Реальность</h3>
-                <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Ваш менеджер превратился в секретаря - 80% времени уходит на вопросы: 
-                  «цена?», «адрес?», «есть в наличии?».
+                <p className="text-xl sm:text-2xl md:text-3xl font-black text-destructive mb-2">
+                  📉 До 70% заявок с рекламы теряются
+                </p>
+                <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
+                  только из-за медленного ответа менеджеров.
                 </p>
               </div>
             </div>
           </Card>
           
-          <Card className="p-4 sm:p-6 md:p-8 bg-card/50 backdrop-blur border-2 border-accent/50 hover:border-accent transition-all">
-            <div className="flex items-start gap-3 sm:gap-4">
-              <div className="p-2 sm:p-3 bg-accent/20 rounded-lg flex-shrink-0">
-                <Icon name="TrendingDown" size={24} className="text-accent sm:w-8 sm:h-8" />
+          <Card className="p-6 sm:p-8 md:p-10 bg-gradient-to-br from-primary/20 to-secondary/20 border-2 border-primary/50">
+            <div className="mb-6">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-black mb-4">
+                🤖 Решение — ИИ-чат-бот, который:
+              </h3>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <Icon name="Check" size={24} className="text-primary mt-1 flex-shrink-0" />
+                <p className="text-base sm:text-lg md:text-xl">отвечает мгновенно (24/7)</p>
               </div>
-              <div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4">Последствие</h3>
-                <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
-                  На «дожим» и реальные продажи нет сил. Клиенты злятся из-за долгих ответов. 
-                  Рекламный бюджет сливается.
-                </p>
+              <div className="flex items-start gap-3">
+                <Icon name="Check" size={24} className="text-primary mt-1 flex-shrink-0" />
+                <p className="text-base sm:text-lg md:text-xl">задаёт правильные вопросы по скрипту продаж</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <Icon name="Check" size={24} className="text-primary mt-1 flex-shrink-0" />
+                <p className="text-base sm:text-lg md:text-xl">прогревает и квалифицирует клиента</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <Icon name="Check" size={24} className="text-primary mt-1 flex-shrink-0" />
+                <p className="text-base sm:text-lg md:text-xl">передаёт менеджеру уже тёплую заявку</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <Icon name="Check" size={24} className="text-primary mt-1 flex-shrink-0" />
+                <p className="text-base sm:text-lg md:text-xl">не устает, не тупит и не «забывает ответить»</p>
               </div>
             </div>
           </Card>
