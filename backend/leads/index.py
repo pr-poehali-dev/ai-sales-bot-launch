@@ -2,6 +2,7 @@ import json
 import os
 import psycopg2
 from psycopg2.extras import RealDictCursor
+import requests
 
 
 def handler(event: dict, context) -> dict:
@@ -58,6 +59,27 @@ def handler(event: dict, context) -> dict:
                 )
                 lead_id = cur.fetchone()[0]
                 conn.commit()
+            
+            # Отправка уведомления в Telegram
+            try:
+                bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
+                chat_id = os.environ.get('TELEGRAM_CHAT_ID')
+                
+                if bot_token and chat_id:
+                    message = f"🔔 Новая заявка #{lead_id}\n\n" \
+                              f"👤 Имя: {name}\n" \
+                              f"🏢 Бизнес: {business_type}\n" \
+                              f"📊 Заявок/неделю: {monthly_leads}\n" \
+                              f"📱 WhatsApp: {whatsapp}"
+                    
+                    telegram_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+                    requests.post(telegram_url, json={
+                        'chat_id': chat_id,
+                        'text': message,
+                        'parse_mode': 'HTML'
+                    }, timeout=5)
+            except Exception as e:
+                print(f"Telegram notification error: {e}")
             
             return {
                 'statusCode': 201,

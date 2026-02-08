@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -12,7 +11,6 @@ interface RegistrationFormProps {
 }
 
 export default function RegistrationForm({ open, onOpenChange }: RegistrationFormProps) {
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     businessType: '',
@@ -41,16 +39,12 @@ export default function RegistrationForm({ open, onOpenChange }: RegistrationFor
       });
 
       if (response.ok) {
-        // Формируем сообщение для WhatsApp
-        const message = `Новая заявка:%0A%0AИмя: ${formData.name}%0AВид бизнеса: ${formData.businessType}%0AЗаявок в неделю: ${formData.leadsPerWeek}%0AWhatsApp: ${formData.whatsapp}`;
-        
-        // Открываем WhatsApp с сообщением
-        window.open(`https://wa.me/996500600150?text=${message}`, '_blank');
-        
-        // Перенаправляем на страницу благодарности
+        // Закрываем форму и очищаем данные
         onOpenChange(false);
         setFormData({ name: '', businessType: '', leadsPerWeek: '', whatsapp: '' });
-        navigate('/thank-you');
+        
+        // Перенаправляем на внешнюю страницу благодарности
+        window.location.href = 'https://esto.kg/thank-you';
       }
     } catch (error) {
       console.error('Ошибка при отправке заявки:', error);
