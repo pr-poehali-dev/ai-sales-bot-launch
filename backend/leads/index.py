@@ -83,10 +83,13 @@ def handler(event: dict, context) -> dict:
                     telegram_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
                     print(f"DEBUG: Sending to Telegram, chat_id: {chat_id_int} (type: {type(chat_id_int)})")
                     
-                    response = requests.post(telegram_url, json={
-                        'chat_id': chat_id_int,
-                        'text': message
-                    }, timeout=5)
+                    # Используем GET-запрос вместо POST для надежности
+                    import urllib.parse
+                    encoded_message = urllib.parse.quote(message)
+                    response = requests.get(
+                        f"{telegram_url}?chat_id={chat_id_int}&text={encoded_message}",
+                        timeout=5
+                    )
                     
                     print(f"DEBUG: Telegram response status: {response.status_code}")
                     print(f"DEBUG: Telegram response: {response.text}")
