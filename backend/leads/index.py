@@ -69,22 +69,21 @@ def handler(event: dict, context) -> dict:
                 print(f"DEBUG: bot_token present: {bool(bot_token)}, chat_id present: {bool(chat_id)}")
                 
                 if bot_token and chat_id:
-                    chat_id_int = int(chat_id)
                     message = f"Novaya zayavka #{lead_id}\n\nImya: {name}\nBiznes: {business_type}\nZayavok/nedelyu: {monthly_leads}\nWhatsApp: {whatsapp}"
                     
-                    telegram_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
-                    print(f"DEBUG: Using urllib, chat_id: {chat_id_int}")
-                    
-                    # Используем встроенную urllib
-                    data = urllib.parse.urlencode({
-                        'chat_id': chat_id_int,
+                    # Простой GET запрос с параметрами в URL
+                    params = urllib.parse.urlencode({
+                        'chat_id': chat_id,
                         'text': message
-                    }).encode('utf-8')
+                    })
+                    telegram_url = f"https://api.telegram.org/bot{bot_token}/sendMessage?{params}"
                     
-                    req = urllib.request.Request(telegram_url, data=data, method='POST')
-                    req.add_header('Content-Type', 'application/x-www-form-urlencoded')
+                    print(f"DEBUG: GET request to Telegram")
+                    print(f"DEBUG: chat_id={chat_id}, message_length={len(message)}")
                     
-                    with urllib.request.urlopen(req, timeout=5) as response:
+                    req = urllib.request.Request(telegram_url, method='GET')
+                    
+                    with urllib.request.urlopen(req, timeout=10) as response:
                         response_data = response.read().decode('utf-8')
                         print(f"DEBUG: Telegram response status: {response.status}")
                         print(f"DEBUG: Telegram response: {response_data}")
