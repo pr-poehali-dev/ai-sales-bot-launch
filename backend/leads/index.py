@@ -2,7 +2,8 @@ import json
 import os
 import psycopg2
 from psycopg2.extras import RealDictCursor
-import requests
+import urllib.request
+import urllib.parse
 
 
 def handler(event: dict, context) -> dict:
@@ -68,32 +69,25 @@ def handler(event: dict, context) -> dict:
                 print(f"DEBUG: bot_token present: {bool(bot_token)}, chat_id present: {bool(chat_id)}")
                 
                 if bot_token and chat_id:
-                    # Конвертируем chat_id в int для корректной работы с API
-                    try:
-                        chat_id_int = int(chat_id)
-                    except ValueError:
-                        chat_id_int = chat_id
-                    
-                    message = f"Новая заявка #{lead_id}\n\nИмя: {name}\nБизнес: {business_type}\nЗаявок/неделю: {monthly_leads}\nWhatsApp: {whatsapp}"
+                    chat_id_int = int(chat_id)
+                    message = f"Novaya zayavka #{lead_id}\n\nImya: {name}\nBiznes: {business_type}\nZayavok/nedelyu: {monthly_leads}\nWhatsApp: {whatsapp}"
                     
                     telegram_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
-                    print(f"DEBUG: Sending to Telegram, chat_id: {chat_id_int} (type: {type(chat_id_int)})")
+                    print(f"DEBUG: Using urllib, chat_id: {chat_id_int}")
                     
-                    # Простой POST с параметрами (не JSON)
-                    response = requests.post(
-                        telegram_url,
-                        data={
-                            'chat_id': chat_id_int,
-                            'text': message
-                        },
-                        timeout=5
-                    )
+                    # Используем встроенную urllib
+                    data = urllib.parse.urlencode({
+                        'chat_id': chat_id_int,
+                        'text': message
+                    }).encode('utf-8')
                     
-                    print(f"DEBUG: Request URL: {telegram_url}")
-                    print(f"DEBUG: Request data: chat_id={chat_id_int}, text_length={len(message)}")
+                    req = urllib.request.Request(telegram_url, data=data, method='POST')
+                    req.add_header('Content-Type', 'application/x-www-form-urlencoded')
                     
-                    print(f"DEBUG: Telegram response status: {response.status_code}")
-                    print(f"DEBUG: Telegram response: {response.text}")
+                    with urllib.request.urlopen(req, timeout=5) as response:
+                        response_data = response.read().decode('utf-8')
+                        print(f"DEBUG: Telegram response status: {response.status}")
+                        print(f"DEBUG: Telegram response: {response_data}")
                 else:
                     print(f"DEBUG: Missing Telegram credentials")
             except Exception as e:
