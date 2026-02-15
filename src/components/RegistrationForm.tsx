@@ -108,7 +108,7 @@ export default function RegistrationForm({ open, onOpenChange }: RegistrationFor
               <Input
                 id="leadsPerWeek"
                 type="text"
-                placeholder="Например: 10-25"
+                placeholder="400-600"
                 value={formData.leadsPerWeek}
                 onChange={(e) => handleChange('leadsPerWeek', e.target.value)}
                 required
@@ -118,7 +118,7 @@ export default function RegistrationForm({ open, onOpenChange }: RegistrationFor
 
             <div className="space-y-2">
               <Label htmlFor="whatsapp" className="text-base font-semibold">
-                Номер WhatsApp
+                Номер телефона
               </Label>
               <Input
                 id="whatsapp"
