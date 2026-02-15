@@ -64,16 +64,23 @@ def handler(event: dict, context) -> dict:
                 bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
                 chat_id = os.environ.get('TELEGRAM_CHAT_ID')
                 
+                print(f"Telegram credentials: token={bool(bot_token)}, chat_id={chat_id}")
+                
                 if bot_token and chat_id:
                     message = f"🆕 Новая заявка #{lead_id}\n\n👤 Имя: {name}\n💼 Бизнес: {business_type}\n📊 Заявок/неделю: {monthly_leads}\n📱 WhatsApp: {whatsapp}"
                     
-                    requests.post(
+                    response = requests.post(
                         f"https://api.telegram.org/bot{bot_token}/sendMessage",
                         json={"chat_id": chat_id, "text": message},
                         timeout=5
                     )
+                    print(f"Telegram response: status={response.status_code}, body={response.text}")
+                else:
+                    print("Missing Telegram credentials!")
             except Exception as e:
                 print(f"Telegram notification error: {e}")
+                import traceback
+                print(traceback.format_exc())
             
             return {
                 'statusCode': 201,
