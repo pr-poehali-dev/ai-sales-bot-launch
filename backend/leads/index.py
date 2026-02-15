@@ -2,8 +2,7 @@ import json
 import os
 import psycopg2
 from psycopg2.extras import RealDictCursor
-import urllib.request
-import urllib.parse
+import requests
 
 
 def handler(event: dict, context) -> dict:
@@ -61,38 +60,20 @@ def handler(event: dict, context) -> dict:
                 lead_id = cur.fetchone()[0]
                 conn.commit()
             
-            # Отправка уведомления в Telegram
             try:
                 bot_token = os.environ.get('TELEGRAM_BOT_TOKEN')
                 chat_id = os.environ.get('TELEGRAM_CHAT_ID')
                 
-                print(f"DEBUG: bot_token present: {bool(bot_token)}, chat_id present: {bool(chat_id)}")
-                
                 if bot_token and chat_id:
-                    message = f"Novaya zayavka #{lead_id}\n\nImya: {name}\nBiznes: {business_type}\nZayavok/nedelyu: {monthly_leads}\nWhatsApp: {whatsapp}"
+                    message = f"🆕 Новая заявка #{lead_id}\n\n👤 Имя: {name}\n💼 Бизнес: {business_type}\n📊 Заявок/неделю: {monthly_leads}\n📱 WhatsApp: {whatsapp}"
                     
-                    # Простой GET запрос с параметрами в URL
-                    params = urllib.parse.urlencode({
-                        'chat_id': chat_id,
-                        'text': message
-                    })
-                    telegram_url = f"https://api.telegram.org/bot{bot_token}/sendMessage?{params}"
-                    
-                    print(f"DEBUG: GET request to Telegram")
-                    print(f"DEBUG: chat_id={chat_id}, message_length={len(message)}")
-                    
-                    req = urllib.request.Request(telegram_url, method='GET')
-                    
-                    with urllib.request.urlopen(req, timeout=10) as response:
-                        response_data = response.read().decode('utf-8')
-                        print(f"DEBUG: Telegram response status: {response.status}")
-                        print(f"DEBUG: Telegram response: {response_data}")
-                else:
-                    print(f"DEBUG: Missing Telegram credentials")
+                    requests.post(
+                        f"https://api.telegram.org/bot{bot_token}/sendMessage",
+                        json={"chat_id": chat_id, "text": message},
+                        timeout=5
+                    )
             except Exception as e:
                 print(f"Telegram notification error: {e}")
-                import traceback
-                print(f"Traceback: {traceback.format_exc()}")
             
             return {
                 'statusCode': 201,
